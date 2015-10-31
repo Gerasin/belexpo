@@ -24,7 +24,7 @@
         <div class="head-inner">
             <div class="wr">
                 <div class="head">
-                    <div class="logo"><a href="/"><img src="img/logo.png" alt=""></a></div>
+                    <div class="logo"><img src="img/logo.png" alt=""></div>
                     <div class="menu">
                         <ul>
                             <li><a href="">О компании</a></li>
@@ -38,12 +38,27 @@
                         <a href="" class="eng">Eng</a>
                         <a href="" class="rus">Rus</a>
                     </div>
+                    <a href="" class="menu-mob"></a>
                     <div class="search-head">
                         <form action="">
                             <input type="text" placeholder="Искать...">
                             <button></button>
                             <a href="" class="search-head-open"></a>
                         </form>
+                    </div>
+                    <div class="head-mob">
+                        <span class="head-mob-close"></span>
+                        <ul>
+                            <li><a href="">О компании</a></li>
+                            <li><a href="">Выставки</a></li>
+                            <li><a href="">Новости</a></li>
+                            <li><a href="">Услуги</a></li>
+                            <li><a href="">Контакты</a></li>
+                        </ul>
+                        <div class="lange">
+                            <a href="" class="eng">Eng</a>
+                            <a href="" class="rus">Rus</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -77,8 +92,10 @@
         </div>
         <div class="wr">
             <div class="left-column-inner">
-                <ul class="menu-page">
-                    <li><span>Общая информация</span></li>
+                <ul class="menu-page menu-page-active">
+                    <li class="active"><span>Общая информация</span></li>
+                </ul>
+                <ul class="menu-page menu-page-lnk">
                     <li><a href="">Программа</a></li>
                     <li><a href="">Рекламные макеты и банеры</a></li>
                     <li><a href="">Контакты</a></li>
@@ -215,19 +232,108 @@
                                 <input type="text" class="inp-st inp-dov" placeholder="от">
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="form-tab">
+                    <div class="form-tab-header">Контактные данные</div>
+                    <div class="form-tab-cont">
+                        <div class="form-tr">
+                            <div class="form-th">Телефон<span class="col-orange">*</span></div>
+                            <div class="form-td">
+                                <input type="text" class="inp-st">
+                            </div>
+                        </div>
+                        <div class="form-tr">
+                            <div class="form-th">Мобильный телефон<span class="col-orange">*</span></div>
+                            <div class="form-td">
+                                <input type="text" class="inp-st">
+                            </div>
+                        </div>
+                        <div class="form-tr">
+                            <div class="form-th">Факс</div>
+                            <div class="form-td">
+                                <input type="text" class="inp-st">
+                            </div>
+                        </div>
+                        <div class="form-tr">
+                            <div class="form-th">Электронная почта</div>
+                            <div class="form-td">
+                                <input type="text" class="inp-st">
+                            </div>
+                        </div>
+                        <div class="form-tr">
+                            <div class="form-th">Сайт</div>
+                            <div class="form-td">
+                                <input type="text" class="inp-st">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-tab">
+                    <div class="form-tab-header">Стенды</div>
+                    <div class="form-tab-cont">
+                        <div class="form-tr">
+                            <div class="form-th">Типовой стенд</div>
+                            <div class="form-td">
+                                <input type="text" class="inp-st inp-st-v">
+                                <div class="form-v">м<span>2</span></div>
+                            </div>
+                        </div>
+                        <div class="form-tr">
+                            <div class="form-th">Оборудованная площадь</div>
+                            <div class="form-td">
+                                <input type="text" class="inp-st inp-st-v">
+                                <div class="form-v">м<span>2</span></div>
+                            </div>
+                        </div>
+                        <div class="form-tr">
+                            <div class="form-th">Необорудованная площадь</div>
+                            <div class="form-td">
+                                <input type="text" class="inp-st inp-st-v">
+                                <div class="form-v">м<span>2</span></div>
+                            </div>
+                        </div>
+                        <div class="form-tr">
+                            <div class="form-th">Открытая площадь</div>
+                            <div class="form-td">
+                                <input type="text" class="inp-st inp-st-v">
+                                <div class="form-v">м<span>2</span></div>
+                            </div>
+                        </div>
+                        <div class="form-tr">
+                            <div class="form-th">Субэкспоненты</div>
+                            <div class="form-td">
+                                <input type="text" class="inp-st">
+                            </div>
+                        </div>
+                        <div class="form-dop">
+                            <div class="form-dop-h">Заказываемое дополнительное оборудование и услуги (перечень и цены указаны в Приложении №2)</div>
+                            <div class="form-dop-table">
+                                <table>
+                                    <tr>
+                                        <th>Название</th>
+                                        <th><div class="mob-hide">Количество</div><div class="mob-show">Кол-во</div></th>
+                                    </tr>
+                                    <tr>
+                                        <td>дополнительное оборудование и услуги</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>дополнительное оборудование и услуги</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>дополнительное оборудование и услуги</td>
+                                        <td>2</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
                         <div class="form-tr-footer">
                             <div class="form-tr-message">Осталось указать «<a href="#adres_banka">Адрес банка</a>»</div>
                             <div class="form-tr-btn"><button>Продолжить</button></div> <!-- для активного состояния класс .active -->
                         </div>
                     </div>
-                </div>
-                <div class="form-tab">
-                    <div class="form-tab-header">Контактные данные</div>
-                    <div class="form-tab-cont"></div>
-                </div>
-                <div class="form-tab">
-                    <div class="form-tab-header">Стенды</div>
-                    <div class="form-tab-cont"></div>
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -261,6 +367,8 @@
                 </div>
                 <div class="clearfix"></div>
                 <div class="development">Разработка сайта — <a href="http://nineseven.ru/">Nineseven</a></div>
+                <div class="copyright-mob">© 2015 Национальный выставочный центр «БелЭкспо»</div>
+                <div class="clearfix"></div>
             </div>
         </div>
 
@@ -301,6 +409,7 @@
         <script src="js/jquery.mousewheel-3.0.6.pack.js"></script>
         <script src="source/jquery.fancybox.pack.js"></script>
         <script src="js/jquery.selectik.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

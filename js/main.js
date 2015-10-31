@@ -49,7 +49,18 @@ $(document).ready(function(){
  	});
 
  	// Карусель на главной
- 	$('.slider').slick();
+ 	$('.slider').slick({
+
+ 		responsive: [
+		    {
+		      breakpoint: 1200,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1
+		      }
+		    }
+	    ]
+ 	});
 
  	// Контакты
  	$('.contacts-header').click(function(){
@@ -70,7 +81,28 @@ $(document).ready(function(){
 	        scrollTop: $(anchor).offset().top
 	    }, 1000);
  		return false;
+ 	});
+
+ 	// mobile menu
+ 	$('.menu-mob').click(function(){
+ 		$('.head-mob').slideToggle();
+ 		return false;
+ 	});
+ 	$('.head-mob-close').click(function(){
+ 		$('.head-mob').slideUp();
+ 		return false;
+ 	});
+
+ 	//
+ 	$('.menu-page-active a, .menu-page-active span').click(function(){
+ 		if($(window).width() < 767) {
+ 			$('.menu-page-lnk').slideToggle()
+ 			$(this).toggleClass('act');
+ 		};
+ 		return false;
  	})
+
+
 
 });
 
