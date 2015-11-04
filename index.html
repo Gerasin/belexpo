@@ -15,13 +15,25 @@
         <link rel="stylesheet" href="source/jquery.fancybox.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/slick.js"></script>
+        <script src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+        <script src="source/jquery.fancybox.pack.js"></script>
+        <script src="js/jquery.selectik.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        
+        <div id="message_subscription" class="message message-blue"><span>Вы успешно подписались на рассылку новостей и событий!</span><a href="" class="message-close"></a></div>
+        <div id="message_form" class="message message-green"><span>Ваше сообщение отправлено</span><a href="" class="message-close"></a></div>
+        <div id="message_error" class="message message-red"><span>Ошибка</span><a href="" class="message-close"></a></div>
         <div class="wr">
             <div class="head">
                 <div class="logo"><img src="img/logo.png" alt=""></div>
@@ -66,7 +78,7 @@
            <div class="slider">
                 <div class="slider-item">
                     <img src="img/sl_1.jpg" alt="" class="sl-img">
-                    <div class="slider-h"><a href=""><span>Стройэкспо. Строим дом. Энергоэффективное строительство, зеленое строительство</span></a></div>
+                    <div class="slider-h" rel="60"><a href=""><span>Стройэкспо. Строим дом. Энергоэффективное строительство, зеленое строительство Стройэкспо. Строим дом. Энергоэффективное строительство, зеленое строительство</span></a></div>
                     <div class="slider-h2">
                         Международная<br> специализированная<br> выставка-ярмарка<br> товаров для охоты и<br> рыбалки
                     </div>
@@ -83,12 +95,12 @@
                             <span>ноября</span>
                         </div>
                         <div class="clearfix"></div>
-                        <a href="" class="sl-btn popup_open" rel="#order">Получить пригласительный</a>
+                        <a href="" class="sl-btn" rel="#order">Получить пригласительный</a>
                     </div>
                 </div>
                 <div class="slider-item">
                     <img src="img/sl_1.jpg" alt="" class="sl-img">
-                    <div class="slider-h"><a href=""><span>Стройэкспо. Строим дом. Энергоэффективное строительство, зеленое строительство</span></a></div>
+                    <div class="slider-h" rel="60"><a href=""><span>Стройэкспо. Строим дом. Энергоэффективное строительство, зеленое строительство Стройэкспо. Строим дом. Энергоэффективное строительство, зеленое строительство Стройэкспо. Строим дом. Энергоэффективное строительство, зеленое строительство Стройэкспо. Строим дом. </span></a></div>
                     <div class="slider-h2">
                         Международная<br> специализированная<br> выставка-ярмарка<br> товаров для охоты и<br> рыбалки
                     </div>
@@ -102,7 +114,7 @@
                 </div>
                 <div class="slider-item">
                     <img src="img/sl_1.jpg" alt="" class="sl-img">
-                    <div class="slider-h"><a href=""><span>Стройэкспо. Строим дом. Энергоэффективное строительство, зеленое строительство</span></a></div>
+                    <div class="slider-h" rel="60"><a href=""><span>Стройэкспо. Строим дом. Энергоэффективное строительство, зеленое строительство</span></a></div>
                     <div class="slider-h2">
                         Международная<br> специализированная<br> выставка-ярмарка<br> товаров для охоты и<br> рыбалки
                     </div>
@@ -119,7 +131,7 @@
                             <span>ноября</span>
                         </div>
                         <div class="clearfix"></div>
-                        <a href="" class="sl-btn popup_open" rel="#order">Получить пригласительный</a>
+                        <a href="" class="sl-btn" rel="#order">Получить пригласительный</a>
                     </div>
                 </div>
             </div> 
@@ -322,18 +334,6 @@
                 <button class="form-btn">Отправить</button>
             </div>
         </div>
-
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/slick.js"></script>
-        <script src="js/jquery.mousewheel-3.0.6.pack.js"></script>
-        <script src="source/jquery.fancybox.pack.js"></script>
-        <script src="js/jquery.selectik.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
-
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

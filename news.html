@@ -15,21 +15,34 @@
         <link rel="stylesheet" href="source/jquery.fancybox.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/slick.js"></script>
+        <script src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+        <script src="source/jquery.fancybox.pack.js"></script>
+        <script src="js/jquery.selectik.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <div id="message_subscription" class="message message-blue"><span>Вы успешно подписались на рассылку новостей и событий!</span><a href="" class="message-close"></a></div>
+        <div id="message_form" class="message message-green"><span>Ваше сообщение отправлено</span><a href="" class="message-close"></a></div>
+        <div id="message_error" class="message message-red"><span>Ошибка</span><a href="" class="message-close"></a></div>
+
         <div class="head-inner">
             <div class="wr">
                 <div class="head">
-                <div class="logo"><img src="img/logo.png" alt=""></div>
+                <div class="logo"><a href="/"><img src="img/logo.png" alt=""></a></div>
                 <div class="menu">
                     <ul>
                         <li><a href="">О компании</a></li>
                         <li><a href="">Выставки</a></li>
-                        <li><a href="">Новости</a></li>
+                        <li>Новости</li>
                         <li><a href="">Услуги</a></li>
                         <li><a href="">Контакты</a></li>
                     </ul>
@@ -123,13 +136,13 @@
                     <div class="news-cont">Самая популярная мужская выставка страны «Охота и рыболовство. Весна-2015» пройдет в Минске с 1 по 4 апреля. По традиции, все, что необходимо рыболовам, охотникам и просто любителям активного образа жизни, будет представлено в выставочном павильоне «БелЭкспо» на ул. Я.Купалы, 27.</div>
                 </div>
                 <div class="listing-page">
-                    <div class="listing-arrow">Предыдущая</div>
+                    <div class="listing-arrow"><a href="">Предыдущая</a></div>
                     <div class="listing-lnk">
                         <li><a href="">1</a></li>
-                        <li><a href="">2</a></li>
-                        <li class="active"><a href="">3</a></li>
-                        <li><a href="">4</a></li>
+                        <li><span>...</span></li>
                         <li><a href="">5</a></li>
+                        <li class="active"><a href="">6</a></li>
+                        <li><a href="">7</a></li>
                         <li><span>...</span></li>
                         <li><a href="">25</a></li>
                     </div>
@@ -160,7 +173,7 @@
                     <ul>
                         <li><span>Информация</span></li>
                         <li><a href="">О компании</a></li>
-                        <li><a href="">Новости</a></li>
+                        <li>Новости</li>
                         <li><a href="">Выставки</a></li>
                         <li><a href="">Контакты</a></li>
                     </ul>
@@ -171,17 +184,6 @@
                 <div class="clearfix"></div>
             </div>
         </div>
-
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/slick.js"></script>
-        <script src="js/jquery.mousewheel-3.0.6.pack.js"></script>
-        <script src="source/jquery.fancybox.pack.js"></script>
-        <script src="js/jquery.selectik.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

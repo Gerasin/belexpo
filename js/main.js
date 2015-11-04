@@ -35,7 +35,14 @@ $(document).ready(function(){
 	// открытие поиска
 	$('.search-head-open').click(function(){
 		$('.search-head').addClass('active');
-		$('.search-head input').animate({'width' : 226 + 'px'});
+		if($(window).width() > 767) {
+			$('.search-head input').animate({'width' : 226 + 'px'});
+			if($(window).width() < 1000) {
+				$('.menu').hide();
+			};
+		} else {
+			$('.search-head input').animate({'width' : 127 + 'px'})
+		};
 		return false;
 	});
 
@@ -50,7 +57,7 @@ $(document).ready(function(){
 
  	// Карусель на главной
  	$('.slider').slick({
-
+ 		speed: 800,
  		responsive: [
 		    {
 		      breakpoint: 1200,
@@ -70,7 +77,18 @@ $(document).ready(function(){
  	$('.contacts-item:first').addClass('active');
  	$('.contacts-item:first').find('.contact-list').show();
 
- 	$(".fancybox").fancybox();
+ 	if($(window).width() > 767) {
+ 		if($(".photo-img").length) {
+ 			$(".photo-img").fancybox()
+ 		};
+ 	} else {
+ 		$(".photo-img").click(function(){
+ 			return false;
+ 		})
+ 	};
+ 	if($(".photo-video").length) {
+ 		$(".photo-video").fancybox()
+ 	};
 
  	$('select').selectik({minScrollHeight: 20});
 
@@ -100,11 +118,100 @@ $(document).ready(function(){
  			$(this).toggleClass('act');
  		};
  		return false;
- 	})
+ 	});
 
+
+ 	// Отправка формы подписки
+ 	/*$('.delivery-form button').click(function(){
+ 		var email = $('.delivery-form input').val();
+ 		return false;
+ 	});*/
+	$('.message-close').click(function(){
+		$(".message").fadeOut();
+		return false;
+	});
+ 	$('.delivery-btn').click(function() {
+ 		$(".message").fadeOut();
+ 		var inpEmail = $('.delivery-inp');
+		if(inpEmail.val() != '') {
+			var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+			if(pattern.test(inpEmail.val())){
+				$('#message_subscription').fadeIn();
+			} else {
+				$('#message_error').fadeIn();
+				$('#message_error span').text('Неверный почтовый ящик');
+			}
+		} else {
+			$('#message_error').fadeIn();
+			$('#message_error span').text('Укажите почтовый ящик');
+		};
+		setTimeout('$(".message").fadeOut()', 9000);
+		return false;
+	});
+
+	textHeight();
+
+	if($('.head-inner').length > 0) {
+		var heightC = $(window).height() - ($('.head-inner').height() + $('.footer').height()) - 140;
+	} else {
+		var heightC = $(window).height() - ($('.head').height() + $('.footer').height()) - 98;
+	}
+	var heightCont = $('.height_center-pad').height();
+	$('.height_center').css({'min-height' : heightC});
+	if(heightC > heightCont) {
+		var heightPad = (heightC - heightCont) / 2;
+		heightPad = heightPad + 'px';
+		$('.height_center-pad').css({'padding-top' : heightPad});
+	};
+
+	$('.head-txt-open a.lnk-open').click(function(){
+		var txtHeight = $('.head-txt p').height();
+		txtHeight = txtHeight + 'px';
+		$('.head-txt').animate({'height' : txtHeight});
+		$(this).hide();
+		$('.head-txt-open a.lnk-close').show();
+		return false;
+	});
+	$('.head-txt-open a.lnk-close').click(function(){
+		var txtHeight = $('.head-txt p').height();
+		txtHeight = 24 + 'px';
+		$('.head-txt').animate({'height' : txtHeight});
+		$(this).hide();
+		$('.head-txt-open a.lnk-open').show();
+		return false;
+	})
 
 
 });
+
+
+function textHeight() {
+	$('.slider-h').each(function(){
+		var textThis = $(this);
+		var textH = textThis.find('span').height();
+		var boxH = 215;
+		if(textH > boxH) {
+			var textSize = textThis.attr('rel');
+			textSize = --textSize;
+			textSizeN = textSize + 'px';
+			var textSize = textThis.attr('rel', textSize);
+			textThis.css('font-size', textSizeN);
+			
+		}
+	});
+	var indexStart = 0;
+	$('.slider-h').each(function(){
+		var textThis = $(this);
+		var textH = textThis.find('span').height();
+		var boxH = 215;
+		if(textH > boxH) {
+			indexStart = ++indexStart;
+		};
+	});
+	if(indexStart > 0) {
+		textHeight();
+	};
+};
 
 
 // Попап

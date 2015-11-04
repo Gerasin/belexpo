@@ -15,20 +15,33 @@
         <link rel="stylesheet" href="source/jquery.fancybox.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/slick.js"></script>
+        <script src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+        <script src="source/jquery.fancybox.pack.js"></script>
+        <script src="js/jquery.selectik.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <div id="message_subscription" class="message message-blue"><span>Вы успешно подписались на рассылку новостей и событий!</span><a href="" class="message-close"></a></div>
+        <div id="message_form" class="message message-green"><span>Ваше сообщение отправлено</span><a href="" class="message-close"></a></div>
+        <div id="message_error" class="message message-red"><span>Ошибка</span><a href="" class="message-close"></a></div>
+
         <div class="head-inner">
             <div class="wr">
                 <div class="head">
-                    <div class="logo"><img src="img/logo.png" alt=""></div>
+                    <div class="logo"><a href="/"><img src="img/logo.png" alt=""></a></div>
                     <div class="menu">
                         <ul>
                             <li><a href="">О компании</a></li>
-                            <li><a href="">Выставки</a></li>
+                            <li>Выставки</li>
                             <li><a href="">Новости</a></li>
                             <li><a href="">Услуги</a></li>
                             <li><a href="">Контакты</a></li>
@@ -69,7 +82,7 @@
                         <img src="img/sl_1.jpg" alt="" class="sl-img">
                         <div class="slider-h">Охота и рыболовство. Осень 2015</div>
                         <div class="slider-h2">
-                            Выставка-ярмарка товаров для охоты      и рыбалки
+                            Выставка-ярмарка<br> товаров для охоты<br> и рыбалки
                         </div>
                         <div class="slider-date">
                             <div class="sl-date-item sl-date-name">
@@ -84,7 +97,7 @@
                                 <span>ноября</span>
                             </div>
                             <div class="clearfix"></div>
-                            <a href="" class="sl-btn popup_open" rel="#order">Получить пригласительный</a>
+                            <a href="" class="sl-btn" rel="#order">Получить пригласительный</a>
                         </div>
                     </div>
                 </div> 
@@ -102,11 +115,20 @@
                     <li><a href="">Другой раздел</a></li>
                     <li><a href="">Другой раздел</a></li>
                 </ul>
+                <div class="delivery">
+                    <div class="delivery-h">Подписаться на рассылку</div>
+                    <div class="delivery-form">
+                        <form action="">
+                            <input type="text" class="delivery-inp">
+                            <button class="delivery-btn"></button>
+                        </form>
+                    </div>
+                </div>
                 <div class="baner baner-bor-blue"><a href=""><img src="img/baner_1.png" alt=""></a></div>
                 <div class="baner baner-bor-green"><a href=""><img src="img/baner_2.png" alt=""></a></div>
                 <div class="baner baner-bor-blue"><a href=""><img src="img/baner_3.png" alt=""></a></div>
                 <div class="doc-column down-lnk">
-                    <div class="doc-item"><a href=""><img src="img/ico-doc.png" alt="">Договор-заявка на участие</a></div>
+                    <div class="doc-item"><a href=""><img src="img/ico-doc.png" alt="">Скачать договор-заявку на участие</a></div>
                     <div class="doc-item"><a href=""><img src="img/ico-down.png" alt="">Скачать приложение к&nbsp;договору</a></div>
                 </div>
             </div>
@@ -118,7 +140,7 @@
                 </div>
                 <div class="page-txt">
                     <div class="doc-column">
-                        <div class="doc-item"><a href=""><img src="img/ico-doc.png" alt="">Договор-заявка на участие</a></div>
+                        <div class="doc-item"><a href=""><img src="img/ico-doc.png" alt="">Скачать договор-заявку на участие</a></div>
                         <div class="doc-item"><a href=""><img src="img/ico-down.png" alt="">Скачать приложение к&#160;договору</a></div>
                     </div>
                     <p>Национальный выставочный центр “Белэкспо” Управления делами Президента Республики Беларусь приглашает Вас принять участие в Международной специализированной выставке-ярмарке "Охота и рыболовство. Осень-2015", которая будет проходить в г. Минске 22-25 сентября 2015 года в выставочном павильоне по адресу: г. Минск, ул. Я.Купалы, 27.</p>
@@ -242,17 +264,6 @@
                 <button class="form-btn">Отправить</button>
             </div>
         </div>
-
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/slick.js"></script>
-        <script src="js/jquery.mousewheel-3.0.6.pack.js"></script>
-        <script src="source/jquery.fancybox.pack.js"></script>
-        <script src="js/jquery.selectik.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

@@ -87,19 +87,19 @@
 .custom-select .custom-text:after{
 	position:			absolute;
 	top:				18px;
-	right:				10px;
+	right:				14px;
 	content:			' ';
 	z-index: 			2;
 	border-left: 4px solid transparent;
 	border-right: 4px solid transparent;
-	border-top: 5px solid #a7a7a7;
+	border-top: 5px solid #000;
 	}
-.filter .custom-text:after {right: 13px;}
-.custom-select.active .custom-text:after{
+.filter .custom-text:after {right: 16px;}
+.custom-select.open_list .custom-text:after{
 	border-left: 4px solid transparent;
 	border-right: 4px solid transparent;
 	border-top: 0;
-	border-bottom: 5px solid #a7a7a7;
+	border-bottom: 5px solid #000;
 }
 .select-list{
 	top:				40px;
@@ -110,6 +110,7 @@
 	}
 .select-list.custom-scroll{
 	padding:			2px 0 2px 10px;
+	margin-top: -1px;
 	}
 .select-list .selected,
 .select-list li:hover{

@@ -15,16 +15,29 @@
         <link rel="stylesheet" href="source/jquery.fancybox.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/slick.js"></script>
+        <script src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+        <script src="source/jquery.fancybox.pack.js"></script>
+        <script src="js/jquery.selectik.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <div id="message_subscription" class="message message-blue"><span>Вы успешно подписались на рассылку новостей и событий!</span><a href="" class="message-close"></a></div>
+        <div id="message_form" class="message message-green"><span>Ваше сообщение отправлено</span><a href="" class="message-close"></a></div>
+        <div id="message_error" class="message message-red"><span>Ошибка</span><a href="" class="message-close"></a></div>
+
         <div class="head-inner">
             <div class="wr">
                 <div class="head">
-                    <div class="logo"><img src="img/logo.png" alt=""></div>
+                    <div class="logo"><a href="/"><img src="img/logo.png" alt=""></a></div>
                     <div class="menu">
                         <ul>
                             <li><a href="">О компании</a></li>
@@ -64,8 +77,9 @@
                 <div class="head-cont">
                     <div class="head-h1">О компании</div>
                     <div class="head-txt">
-                        Республиканское унитарное предприятие «Национальный выставочный центр «БелЭкспо» является предприятием республиканской формы собственности. Учредителем предприятия является Управление делами Президента Республики Беларусь.
+                       <p> Республиканское унитарное предприятие «Национальный выставочный центр «БелЭкспо» является предприятием республиканской формы собственности. Учредителем предприятия является Управление делами Президента Республики Беларусь.</p>
                     </div>
+                    <div class="head-txt-open"><a href="" class="lnk-open">Подробнее</a><a href="" class="lnk-close">Скрыть</a></div>
                 </div>
             </div>
         </div>
@@ -80,6 +94,15 @@
                     <li><a href="">Другой раздел</a></li>
                     <li><a href="">Другой раздел</a></li>
                 </ul>
+                <div class="delivery">
+                    <div class="delivery-h">Подписаться на рассылку</div>
+                    <div class="delivery-form">
+                        <form action="">
+                            <input type="text" class="delivery-inp">
+                            <button class="delivery-btn"></button>
+                        </form>
+                    </div>
+                </div>
                 <div class="baner baner-bor-blue"><a href=""><img src="img/baner_1.png" alt=""></a></div>
                 <div class="baner baner-bor-green"><a href=""><img src="img/baner_2.png" alt=""></a></div>
                 <div class="baner baner-bor-blue"><a href=""><img src="img/baner_3.png" alt=""></a></div>
@@ -150,24 +173,7 @@
                             <td>Павильон A</td>
                         </tr>
                     </table>
-                    <div class="contacts-item">
-                        <div class="contacts-header">Схлопывающееся меню</div>
-                        <div class="contact-list">
-                            <p>Так уж сложилась, что на осенней выставке «Мебель» производители мебели не только подводят итоги года, но и презентуют новые коллекции – те самые, которые будут удивлять нас в салонах в следующем году. Но зачем ждать, если новинки уже можно приобрести сегодня? Или, по крайней мере, сделать предзаказ.</p>
-                        </div>
-                    </div>
-                    <div class="contacts-item">
-                        <div class="contacts-header">Схлопывающееся меню 2</div>
-                        <div class="contact-list">
-                            <p>Так уж сложилась, что на осенней выставке «Мебель» производители мебели не только подводят итоги года, но и презентуют новые коллекции – те самые, которые будут удивлять нас в салонах в следующем году. Но зачем ждать, если новинки уже можно приобрести сегодня? Или, по крайней мере, сделать предзаказ.</p>
-                        </div>
-                    </div>
-                    <div class="contacts-item">
-                        <div class="contacts-header">Схлопывающееся меню 3</div>
-                        <div class="contact-list">
-                            <p>Так уж сложилась, что на осенней выставке «Мебель» производители мебели не только подводят итоги года, но и презентуют новые коллекции – те самые, которые будут удивлять нас в салонах в следующем году. Но зачем ждать, если новинки уже можно приобрести сегодня? Или, по крайней мере, сделать предзаказ.</p>
-                        </div>
-                    </div>
+                    
                 </div>
                 <div class="baner-big baner-bor-yellow"><a href=""><img src="img/baner_4.png" alt=""></a></div>
             </div>
@@ -206,17 +212,6 @@
                 <div class="clearfix"></div>
             </div>
         </div>
-
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/slick.js"></script>
-        <script src="js/jquery.mousewheel-3.0.6.pack.js"></script>
-        <script src="source/jquery.fancybox.pack.js"></script>
-        <script src="js/jquery.selectik.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
