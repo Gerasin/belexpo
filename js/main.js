@@ -68,6 +68,9 @@ $(document).ready(function(){
 		    }
 	    ]
  	});
+ 	if($(window).width() < 767) {
+ 		$('.slider').slick('unslick');
+ 	};
 
  	// Контакты
  	$('.contacts-header').click(function(){
