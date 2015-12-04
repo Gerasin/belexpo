@@ -182,7 +182,18 @@ $(document).ready(function(){
 		$(this).hide();
 		$('.head-txt-open a.lnk-open').show();
 		return false;
-	})
+	});
+
+
+	$('.js-tabs a').click(function(){
+		$(this).parents('.js-tabs').find('li').removeClass('active');
+		$(this).parents('li').addClass('active');
+		$('.tabs-item').hide();
+		var tabTag = $(this).attr('href');
+		$(tabTag).show();
+		return false;
+	});
+	$('.tabs-item:first').show();
 
 
 });

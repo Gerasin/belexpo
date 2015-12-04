@@ -348,6 +348,7 @@ body {font: normal 18px "nerislight"; color: #000;}
         border-top: 6px solid #00a1df;
     }
     
+    .tabs-item {display: none;}
 
 
 
