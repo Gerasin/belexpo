@@ -488,7 +488,7 @@ body {font: normal 18px "nerislight"; color: #000;}
 .grid {margin: 0 -15px;}
     .grid-column {float: left; width: 270px; margin: 0 15px;}
     .grid-column-2 {width: 570px;}
-        .grid-box {position: relative; margin: 0 0 30px; overflow: hidden;}
+        .grid-box {position: relative; margin: 0 15px 30px; overflow: hidden;}
         .grid-1-1 {height: 155px; width: 270px;}
         .grid-1-2 {height: 340px; width: 270px;}
         .grid-2-2 {height: 340px; width: 570px;}

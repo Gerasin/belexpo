@@ -195,6 +195,15 @@ $(document).ready(function(){
 	});
 	$('.tabs-item:first').show();
 
+	if($('.grid').length) {
+	  var $grid = $('.grid').isotope({
+	    itemSelector: '.grid-box',
+	    percentPosition: true,
+	    resizable : true,
+	    transformsEnabled : true
+	  });
+	};
+
 
 });
 
