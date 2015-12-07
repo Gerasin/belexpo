@@ -206,7 +206,7 @@ $(document).ready(function(){
 
 	if($('.photo-page').length) {
 	  var $grid = $('.photo-page').isotope({
-	    itemSelector: '.photo-item',
+	    itemSelector: '.photo-box',
 	    percentPosition: true,
 	    resizable : true,
 	    transformsEnabled : true

@@ -387,10 +387,11 @@ body {font: normal 18px "nerislight"; color: #000;}
 
 .photo-page {margin: 0 -15px;} 
     .photo-column {float: left; width: 270px; padding: 0 0 0 30px;}
-    .photo-item {display: block; position: relative; width: 30%; margin: 0 15px 30px; float: left;
+    .photo-box {padding: 0 15px 30px; width: 33.3%;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;}
+    .photo-item {display: block; position: relative; width: 100%; margin: 0;}
         .photo-item img {width: 100%;}
     .photo-img:before {position: absolute; z-index: 10; content: ' '; left: 0; top: 0; right: 0; bottom: 0; border: 5px solid #00a1df; background: url(../img/img-zoom.png) center center no-repeat; display: none;}
     .photo-img:after {position: absolute; z-index: 8; content: ' '; left: 0; top: 0; right: 0; bottom: 0; background: #000; opacity: 0.3; display: none;}
@@ -812,6 +813,8 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
     .fancybox-prev, .fancybox-next, .fancybox-close {display: none !important;}
     .slider-date {width: auto; padding-right: 20px;}
     .mob-hide {display: none;}
+    .photo-page {margin: 0 -7px;}
+    .photo-box {padding: 0 7px 7px; width: 50%;}
     
 }
 
