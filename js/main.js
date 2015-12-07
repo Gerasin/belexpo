@@ -204,6 +204,15 @@ $(document).ready(function(){
 	  });
 	};
 
+	if($('.photo-page').length) {
+	  var $grid = $('.photo-page').isotope({
+	    itemSelector: '.photo-item',
+	    percentPosition: true,
+	    resizable : true,
+	    transformsEnabled : true
+	  });
+	};
+
 
 });
 

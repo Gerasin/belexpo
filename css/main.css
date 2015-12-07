@@ -385,9 +385,12 @@ body {font: normal 18px "nerislight"; color: #000;}
     .left-column-inner .doc-column {padding-left: 0; float: none; padding: 0;}
         .header-page {padding: 0 0 25px; font: normal 24px 'nerisblack';}
 
-.photo-page {margin: 0 0 0 -30px;} 
+.photo-page {margin: 0 -15px;} 
     .photo-column {float: left; width: 270px; padding: 0 0 0 30px;}
-    .photo-item {display: block; margin: 0 0 30px; position: relative;}
+    .photo-item {display: block; position: relative; width: 30%; margin: 0 15px 30px; float: left;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;}
         .photo-item img {width: 100%;}
     .photo-img:before {position: absolute; z-index: 10; content: ' '; left: 0; top: 0; right: 0; bottom: 0; border: 5px solid #00a1df; background: url(../img/img-zoom.png) center center no-repeat; display: none;}
     .photo-img:after {position: absolute; z-index: 8; content: ' '; left: 0; top: 0; right: 0; bottom: 0; background: #000; opacity: 0.3; display: none;}
