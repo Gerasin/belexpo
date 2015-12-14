@@ -347,7 +347,10 @@ function textHeight() {
 		}
 	});
 
-	$('.js-valid-phone').mask("+375 00 000 00 00", {placeholder: "+375 __ ___ __ __"});
+	if($('.js-valid-phone').length) {
+		$('.js-valid-phone').mask("+375 00 000 00 00", {placeholder: "+375 __ ___ __ __"});
+	};
+	
 	$('.js-valid-phone').focusout(function(){
 		var validText = $(this).val().length;
 		if(validText < 17) {
@@ -356,7 +359,9 @@ function textHeight() {
 			$(this).removeClass('error-inp');
 		}
 	});
-	$('.js-valid-phone-home').mask('000000000000');
+	if($('.js-valid-phone-home').length) {
+		$('.js-valid-phone-home').mask('000000000000');
+	}
 
 };
 
