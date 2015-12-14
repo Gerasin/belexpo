@@ -254,7 +254,8 @@ body {font: normal 18px "nerislight"; color: #000;}
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;}
-.inp-st:focus, textarea:focus {outline: none; border-color: #8e8e8e;}
+.error-inp {border-color: #f4b3b3; color: #e31010;}
+.inp-st:focus, textarea:focus {outline: none; border-color: #8e8e8e; color: #222;}
 .textar-st {
     width: 100%;
     height: 101px;
@@ -300,12 +301,16 @@ body {font: normal 18px "nerislight"; color: #000;}
     .listing-page {margin: 58px 0 0; text-align: center;padding: 0 0 80px;}
         .listing-arrow {display: inline-block; padding: 0 15px}
             .listing-arrow a:hover {color: #00a1df; border: none;}
+            .listing-default {overflow: hidden; height: 2px; opacity: 0;}
         .listing-lnk {display: inline-block; padding: 0;}
-            .listing-lnk li {padding: 0 3px; list-style: none; display: inline-block;}
+            .listing-lnk li {padding: 0 3px; list-style: none; display: none;}
+            .listing-lnk li.lnk-show {display: inline-block;}
                 .listing-lnk li a {display: block; height: 40px; line-height: 40px; min-width: 30px; padding: 0 5px; text-align: center; border: 0;}
                 .listing-lnk li a:hover {background: #ccecf9;}
                 .listing-lnk li.active a {background: #00a1df; color: #fff; cursor: default;}
                 .listing-lnk li span {display: inline-block; height: 36px; line-height: 36px; border: 2px solid #dadada; padding: 0 15px;}
+
+
 .search-null {padding: 0; text-align: center; font-size: 24px;}
     .search-null p {font-size: 18px; margin: 10px 0 40px;}
     .search-null strong {color: #240a2b;}
@@ -348,7 +353,6 @@ body {font: normal 18px "nerislight"; color: #000;}
         border-top: 6px solid #00a1df;
     }
     
-    .tabs-item {display: none;}
 
 
 
@@ -519,7 +523,7 @@ body {font: normal 18px "nerislight"; color: #000;}
             .grid-1-2 .grid-date-one .grid-date-col span {}
             .grid-date-one  .grid-date-bold span {font-family: 'nerisblack' !important; font-size: 24px; padding-top: 0; margin-top: -1px;}
     .grid-2-2 .grid-h a {font-size: 36px; line-height: 42px;}
-
+.js-menu-tabs .active {display: none;}
 
 
 input[type='radio'] {position: absolute; left: -10000px;}

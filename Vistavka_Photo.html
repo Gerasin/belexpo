@@ -24,6 +24,7 @@
         <script src="js/jquery.selectik.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/isotope.pkgd.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
 
         <script src="js/main.js"></script>
     </head>
@@ -114,12 +115,13 @@
         <div class="wr">
             <div class="left-column-inner">
                 <ul class="menu-page menu-page-active">
-                    <li class="active"><span>Фото и видео</span></li>
+                    <li class="active"><span class="js-menu-act-text">Фото и видео</span></li>
                 </ul>
-                <ul class="menu-page menu-page-lnk js-tabs">
-                    <li class="active"><a href="#tabs-1">Общая информация</a></li>
-                    <li><a href="#tabs-2">Программа</a></li>
-                    <li><a href="#tabs-3">Рекламные макеты и банеры</a></li>
+                <ul class="menu-page menu-page-lnk js-menu-tabs">
+                    <li class="active"><a href="#tabs-1">Фото и видео</a></li>
+                    <li><a href="#tabs-2">Общая информация</a></li>
+                    <li><a href="#tabs-3">Программа</a></li>
+                    <li><a href="#tabs-4">Рекламные макеты и банеры</a></li>
                 </ul>
 
                 <div class="doc-column">
@@ -146,9 +148,9 @@
                     <a href="">Предстоящие на 2015</a> <span>&#62;</span> Охота и рыбаловство. Осень 2015
                 </div>
                 <div class="tabs-cont">
-                    <div id="tabs-1" class="tabs-item">
+                    <div id="tabs-1" class="tabs-item tab-page">
                         <div class="header-page">Фото и видео</div>
-                        <div class="photo-page">
+                        <div class="photo-page photo-tab">
                             <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
                             <div class="photo-box"><a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="group" class="photo-item photo-video fancybox fancybox.iframe"><img src="img/img_2.jpg" alt=""></a></div>
                             <div class="photo-box"><a href="img/img_3.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_3.jpg" alt=""></a></div>
@@ -159,93 +161,176 @@
                             <div class="photo-box"><a href="img/img_2.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_2.jpg" alt=""></a></div>
                             <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
                             <div class="photo-box"><a href="img/img_3.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_3.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_3.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_3.jpg" alt=""></a></div>   
+                        </div>
+                        <div class="photo-page photo-tab">
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="group" class="photo-item photo-video fancybox fancybox.iframe"><img src="img/img_2.jpg" alt=""></a></div> 
+                        </div>
+                        <div class="photo-page photo-tab">
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="group" class="photo-item photo-video fancybox fancybox.iframe"><img src="img/img_2.jpg" alt=""></a></div> 
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="group" class="photo-item photo-video fancybox fancybox.iframe"><img src="img/img_2.jpg" alt=""></a></div> 
+                        </div>
+                        <div class="photo-page photo-tab">
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="group" class="photo-item photo-video fancybox fancybox.iframe"><img src="img/img_2.jpg" alt=""></a></div> 
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div> 
+                        </div>
+                        <div class="photo-page photo-tab">
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                        </div>
+                        <div class="photo-page photo-tab">
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                        </div>
+                        <div class="photo-page photo-tab">
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="group" class="photo-item photo-video fancybox fancybox.iframe"><img src="img/img_2.jpg" alt=""></a></div> 
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="group" class="photo-item photo-video fancybox fancybox.iframe"><img src="img/img_2.jpg" alt=""></a></div> 
+                        </div>
+                        <div class="photo-page photo-tab">
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                        </div>
+                        <div class="photo-page photo-tab">
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                        </div>
+                        <div class="photo-page photo-tab">
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                        </div>
+
+
+
+                        <div class="listing-page">
+                            <div class="listing-arrow listing-prev listing-default"><a href="">Предыдущая</a></div>
+                            <ul class="listing-lnk js-listing">
+                                <li class="lnk-show active"><a href="">1</a></li>
+                                <li class="lnk-show"><a href="">2</a></li>
+                                <li class="lnk-show"><a href="">3</a></li>
+                                <li class="lnk-show"><a href="">4</a></li>
+                                <li class="lnk-show"><a href="">5</a></li>
+                                <li><a href="">6</a></li>
+                                <li><a href="">7</a></li>
+                                <li><a href="">8</a></li>
+                                <li><a href="">9</a></li>
+                                <li><a href="">10</a></li>
+                            </ul>
+                            <div class="listing-arrow listing-next"><a href="">Следующая</a></div>
+                        </div>
+                    </div>
+                    <div id="tabs-2" class="tabs-item tab-page">
+                        <div class="header-page">Общая информация</div>
+                        <div class="photo-page">
+                            <div class="photo-box"><a href="img/img_4.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_4.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="group" class="photo-item photo-video fancybox fancybox.iframe"><img src="img/img_2.jpg" alt=""></a></div>
                             <div class="photo-box"><a href="img/img_3.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_3.jpg" alt=""></a></div>
-                                
-                        </div>
-                        <div class="listing-page">
-                            <div class="listing-arrow"><a href="">Предыдущая</a></div>
-                            <div class="listing-lnk">
-                                <li><a href="">1</a></li>
-                                <li><span>...</span></li>
-                                <li><a href="">5</a></li>
-                                <li class="active"><a href="">6</a></li>
-                                <li><a href="">7</a></li>
-                                <li><span>...</span></li>
-                                <li><a href="">25</a></li>
-                            </div>
-                            <div class="listing-arrow"><a href="">Следующая</a></div>
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_2.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_2.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_3.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_3.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_3.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_3.jpg" alt=""></a></div>   
                         </div>
                     </div>
-                    <div id="tabs-2" class="tabs-item">
-                        <div class="header-page">Фото и видео</div>
-                        <div class="photo-page">
-                            <div class="photo-column">
-                                <a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="group" class="photo-item photo-video fancybox fancybox.iframe"><img src="img/img_2.jpg" alt=""></a>
-                                <a href="img/img_3.jpg" rel="group2" class="photo-item photo-img fancybox"><img src="img/img_3.jpg" alt=""></a>
-                                <a href="img/img_1.jpg" rel="group2" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a>
-                            </div>
-                            <div class="photo-column">
-                                <a href="img/img_1.jpg" rel="group2" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a>
-                                <a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="group" class="photo-item photo-video fancybox fancybox.iframe"><img src="img/img_2.jpg" alt=""></a>
-                                <a href="img/img_3.jpg" rel="group2" class="photo-item photo-img fancybox"><img src="img/img_3.jpg" alt=""></a>
-                                <a href="img/img_4.jpg" rel="group2" class="photo-item photo-img fancybox"><img src="img/img_4.jpg" alt=""></a>
-                            </div>
-                            <div class="photo-column">
-                                <a href="img/img_2.jpg" rel="group2" class="photo-item photo-img fancybox"><img src="img/img_2.jpg" alt=""></a>
-                                <a href="img/img_3.jpg" rel="group2" class="photo-item photo-img fancybox"><img src="img/img_3.jpg" alt=""></a>
-                                <a href="img/img_3.jpg" rel="group2" class="photo-item photo-img fancybox"><img src="img/img_3.jpg" alt=""></a>
-                                <a href="img/img_1.jpg" rel="group2" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a>
-                            </div>
-                            <div class="clearfix"></div>
+                    <div id="tabs-3" class="tabs-item tab-page">
+                        <div class="header-page">Программа</div>
+                        <div class="photo-page photo-tab">
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="group" class="photo-item photo-video fancybox fancybox.iframe"><img src="img/img_2.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_3.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_3.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_4.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_4.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="group" class="photo-item photo-video fancybox fancybox.iframe"><img src="img/img_2.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_3.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_3.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_2.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_2.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_3.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_3.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_3.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_3.jpg" alt=""></a></div>   
                         </div>
+                        <div class="photo-page photo-tab">
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="group" class="photo-item photo-video fancybox fancybox.iframe"><img src="img/img_2.jpg" alt=""></a></div> 
+                        </div>
+                        <div class="photo-page photo-tab">
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="group" class="photo-item photo-video fancybox fancybox.iframe"><img src="img/img_2.jpg" alt=""></a></div> 
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="group" class="photo-item photo-video fancybox fancybox.iframe"><img src="img/img_2.jpg" alt=""></a></div> 
+                        </div>
+                        <div class="photo-page photo-tab">
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="group" class="photo-item photo-video fancybox fancybox.iframe"><img src="img/img_2.jpg" alt=""></a></div> 
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div> 
+                        </div>
+                        <div class="photo-page photo-tab">
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                        </div>
+                        <div class="photo-page photo-tab">
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                        </div>
+                        <div class="photo-page photo-tab">
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="group" class="photo-item photo-video fancybox fancybox.iframe"><img src="img/img_2.jpg" alt=""></a></div> 
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="group" class="photo-item photo-video fancybox fancybox.iframe"><img src="img/img_2.jpg" alt=""></a></div> 
+                        </div>
+                        <div class="photo-page photo-tab">
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                        </div>
+                        <div class="photo-page photo-tab">
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                        </div>
+                        <div class="photo-page photo-tab">
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                        </div>
+
+
+
                         <div class="listing-page">
-                            <div class="listing-arrow"><a href="">Предыдущая</a></div>
-                            <div class="listing-lnk">
-                                <li><a href="">1</a></li>
-                                <li><span>...</span></li>
-                                <li><a href="">5</a></li>
-                                <li class="active"><a href="">6</a></li>
+                            <div class="listing-arrow listing-prev listing-default"><a href="">Предыдущая</a></div>
+                            <ul class="listing-lnk js-listing">
+                                <li class="lnk-show active"><a href="">1</a></li>
+                                <li class="lnk-show"><a href="">2</a></li>
+                                <li class="lnk-show"><a href="">3</a></li>
+                                <li class="lnk-show"><a href="">4</a></li>
+                                <li class="lnk-show"><a href="">5</a></li>
+                                <li><a href="">6</a></li>
                                 <li><a href="">7</a></li>
-                                <li><span>...</span></li>
-                                <li><a href="">25</a></li>
-                            </div>
-                            <div class="listing-arrow"><a href="">Следующая</a></div>
+                                <li><a href="">8</a></li>
+                                <li><a href="">9</a></li>
+                                <li><a href="">10</a></li>
+                            </ul>
+                            <div class="listing-arrow listing-next"><a href="">Следующая</a></div>
                         </div>
                     </div>
-                    <div id="tabs-3" class="tabs-item">
-                        <div class="header-page">Фото и видео</div>
-                        <div class="photo-page">
-                            <div class="photo-column">
-                                <a href="img/img_2.jpg" rel="group3" class="photo-item photo-img fancybox"><img src="img/img_2.jpg" alt=""></a>
-                                <a href="img/img_3.jpg" rel="group3" class="photo-item photo-img fancybox"><img src="img/img_3.jpg" alt=""></a>
-                                <a href="img/img_3.jpg" rel="group3" class="photo-item photo-img fancybox"><img src="img/img_3.jpg" alt=""></a>
-                                <a href="img/img_1.jpg" rel="group3" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a>
-                            </div>
-                            <div class="photo-column">
-                                <a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="group3" class="photo-item photo-video fancybox fancybox.iframe"><img src="img/img_2.jpg" alt=""></a>
-                                <a href="img/img_3.jpg" rel="group3" class="photo-item photo-img fancybox"><img src="img/img_3.jpg" alt=""></a>
-                                <a href="img/img_1.jpg" rel="group3" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a>
-                            </div>
-                            <div class="photo-column">
-                                <a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a>
-                                <a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="group3" class="photo-item photo-video fancybox fancybox.iframe"><img src="img/img_2.jpg" alt=""></a>
-                                <a href="img/img_3.jpg" rel="group3" class="photo-item photo-img fancybox"><img src="img/img_3.jpg" alt=""></a>
-                                <a href="img/img_4.jpg" rel="group3" class="photo-item photo-img fancybox"><img src="img/img_4.jpg" alt=""></a>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="listing-page">
-                            <div class="listing-arrow"><a href="">Предыдущая</a></div>
-                            <div class="listing-lnk">
-                                <li><a href="">1</a></li>
-                                <li><span>...</span></li>
-                                <li><a href="">5</a></li>
-                                <li class="active"><a href="">6</a></li>
-                                <li><a href="">7</a></li>
-                                <li><span>...</span></li>
-                                <li><a href="">25</a></li>
-                            </div>
-                            <div class="listing-arrow"><a href="">Следующая</a></div>
+                    <div id="tabs-4" class="tabs-item tab-page">
+                        <div class="header-page">Рекламные макеты и банеры</div>
+                        <div class="photo-page photo-tab">
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="group" class="photo-item photo-video fancybox fancybox.iframe"><img src="img/img_2.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_3.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_3.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_4.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_4.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" rel="group" class="photo-item photo-video fancybox fancybox.iframe"><img src="img/img_2.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_3.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_3.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_2.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_2.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_1.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_1.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_3.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_3.jpg" alt=""></a></div>
+                            <div class="photo-box"><a href="img/img_3.jpg" rel="group" class="photo-item photo-img fancybox"><img src="img/img_3.jpg" alt=""></a></div>   
                         </div>
                     </div>
                 </div>

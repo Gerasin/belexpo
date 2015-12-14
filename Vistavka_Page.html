@@ -23,6 +23,7 @@
         <script src="source/jquery.fancybox.pack.js"></script>
         <script src="js/jquery.selectik.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
         <script src="js/main.js"></script>
     </head>
     <body>
@@ -113,13 +114,13 @@
             <div class="left-column-inner">
                 <a href="" class="btn-application">Заявка на участие</a>
                 <ul class="menu-page menu-page-active">
-                    <li class="active"><span>О компании</span></li>
+                    <li class="active"><span class="js-menu-act-text">О компании</span></li>
                 </ul>
-                <ul class="menu-page menu-page-lnk">
-                    <li><a href="">Другой раздел</a></li>
-                    <li><a href="">Другой раздел</a></li>
-                    <li><a href="">Другой раздел</a></li>
-                    <li><a href="">Другой раздел</a></li>
+                <ul class="menu-page menu-page-lnk js-menu-tabs">
+                    <li class="active"><a href="#tab-page-1">О компании</a></li>
+                    <li><a href="#tab-page-2">Другой раздел 1</a></li>
+                    <li><a href="#tab-page-3">Другой раздел 2</a></li>
+                    <li><a href="#tab-page-4">Другой раздел 3</a></li>
                 </ul>
                 <div class="delivery">
                     <div class="delivery-h">Подписаться на рассылку</div>
@@ -144,7 +145,7 @@
                     <a href="">Выставки</a> <span>&#62;</span> 
                     <a href="">Предстоящие на 2015</a> <span>&#62;</span> Охота и рыбаловство. Осень 2015
                 </div>
-                <div class="page-txt">
+                <div id="tab-page-1" class="page-txt tab-page">
                     <div class="doc-column">
                         <div class="doc-item"><a href=""><img src="img/ico-doc.png" alt="">Скачать договор-заявку на участие</a></div>
                         <div class="doc-item"><a href=""><img src="img/ico-down.png" alt="">Скачать приложение к&#160;договору</a></div>
@@ -194,6 +195,15 @@
                         <li>Специальная литература</li>
                     </ul>
                     <p>Официальное открытие выставки состоится 22 сентября в 12.00</p>
+                </div>
+                <div id="tab-page-2" class="page-txt tab-page">
+                    <p>Другой раздел 1</p>
+                </div>
+                <div id="tab-page-3" class="page-txt tab-page">
+                    <p>Другой раздел 2</p>
+                </div>
+                <div id="tab-page-4" class="page-txt tab-page">
+                    <p>Другой раздел 3</p>
                 </div>
                 <div class="share-soc">
                     <div class="share-soc-h">Рассказать друзьям</div>

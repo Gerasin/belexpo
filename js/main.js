@@ -213,7 +213,86 @@ $(document).ready(function(){
 	  });
 	};
 
+	$('.js-menu-tabs a').click(function(){
+		var menuID = $(this).attr('href');
+		$('.tab-page').hide();
+		$(menuID).show();
+		$(this).parents('.js-menu-tabs').find('li').removeClass('active');
+		$(this).parents('li').addClass('active');
+		var manuActText = $(this).text();
+		$('.js-menu-act-text').text(manuActText);
+		return false;
+	});
 
+	// Пагинация
+	$('.tabs-item').each(function(){
+		$(this).find('.photo-tab:not(:first)').hide();
+	});
+	$('.js-listing a').click(function(){
+		$(this).parents('.js-listing').find('li').removeClass('active');
+		$(this).parent().addClass('active');
+		var listLeft = 0;
+		var listRight = $(this).parents('.listing-lnk').find('li').length;
+		var listAct = $(this).parent().index() + 1;
+		console.log(listAct);
+		$(this).parents('.listing-lnk').find('li').removeClass('lnk-show');
+		if(listAct < 3) {
+			for (i = 0; i < 5; i++) {
+			  $(this).parents('.listing-lnk').find('li').eq(i).addClass('lnk-show');
+			}
+		};
+		if(listAct > (listRight - 3)) {
+			for (i = listRight - 5; i < listRight; i++) {
+			  $(this).parents('.listing-lnk').find('li').eq(i).addClass('lnk-show');
+			}
+		};
+		if(listAct > 2 && listAct < (listRight - 2)) {
+			for (i = (listAct - 3); i < (listAct + 2); i++) {
+			  $(this).parents('.listing-lnk').find('li').eq(i).addClass('lnk-show');
+			}
+		};
+		$(this).parents('.tabs-item').find('.photo-tab').hide();
+		listAct = --listAct;
+		$(this).parents('.tabs-item').find('.photo-tab').eq(listAct).show();
+		if(listAct == listRight - 1) {
+			$(this).parents('.listing-page').find('.listing-next').addClass('listing-default');
+		} else {
+			$(this).parents('.listing-page').find('.listing-next').removeClass('listing-default');
+		};
+		if(listAct == 0) {
+			$(this).parents('.listing-page').find('.listing-prev').addClass('listing-default');
+		} else {
+			$(this).parents('.listing-page').find('.listing-prev').removeClass('listing-default');
+		};
+
+		return false;
+	});
+	$('.listing-next a').click(function(){
+		var listAct = $(this).parents('.listing-page').find('li.active').index() ;
+		listAct = ++listAct;
+		$(this).parents('.listing-page').find('li').eq(listAct).find('a').click();
+		$(this).parents('.listing-page').find('.listing-prev').removeClass('listing-default');
+		if(listAct == $(this).parents('.listing-page').find('li').length - 1) {
+			$('.listing-next').addClass('listing-default');
+		}
+		return false;
+	});
+	$('.listing-prev a').click(function(){
+		var listAct = $(this).parents('.listing-page').find('li.active').index() ;
+		listAct = --listAct;
+		$(this).parents('.listing-page').find('li').eq(listAct).find('a').click();
+		$(this).parents('.listing-page').find('.listing-next').removeClass('listing-default');
+		if(listAct == 0) {
+			$('.listing-prev').addClass('listing-default');
+		};
+		return false;
+	})
+
+
+});
+
+$(window).load(function(){
+	$('.tab-page:not(:first)').hide();
 });
 
 
@@ -243,6 +322,42 @@ function textHeight() {
 	if(indexStart > 0) {
 		textHeight();
 	};
+
+
+	// Валидация формы
+	$('.js-valid, .js-valid-phone-home').focusout(function(){
+		var validText = $(this).val().length;
+		if(validText < 2) {
+			$(this).addClass('error-inp');
+		} else {
+			$(this).removeClass('error-inp');
+		}
+	});
+	$('.js-valid-mail').focusout(function(){
+		var validText = $(this).val().length;
+		if(validText < 2) {
+			$(this).addClass('error-inp');
+		} else {
+			var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+            if(pattern.test($(this).val())){
+                $(this).removeClass('error-inp');
+            } else {
+               	$(this).addClass('error-inp');
+            }
+		}
+	});
+
+	$('.js-valid-phone').mask("+375 00 000 00 00", {placeholder: "+375 __ ___ __ __"});
+	$('.js-valid-phone').focusout(function(){
+		var validText = $(this).val().length;
+		if(validText < 17) {
+			$(this).addClass('error-inp');
+		} else {
+			$(this).removeClass('error-inp');
+		}
+	});
+	$('.js-valid-phone-home').mask('000000000000');
+
 };
 
 
