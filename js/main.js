@@ -204,14 +204,7 @@ $(document).ready(function(){
 	  });
 	};
 
-	if($('.photo-page').length) {
-	  var $grid = $('.photo-page').isotope({
-	    itemSelector: '.photo-box',
-	    percentPosition: true,
-	    resizable : true,
-	    transformsEnabled : true
-	  });
-	};
+	
 
 	$('.js-menu-tabs a').click(function(){
 		var menuID = $(this).attr('href');
@@ -293,6 +286,15 @@ $(document).ready(function(){
 
 $(window).load(function(){
 	$('.tab-page:not(:first)').hide();
+
+	if($('.photo-page').length) {
+	  var $grid = $('.photo-page').isotope({
+	    itemSelector: '.photo-box',
+	    percentPosition: true,
+	    resizable : true,
+	    transformsEnabled : true
+	  });
+	};
 });
 
 
