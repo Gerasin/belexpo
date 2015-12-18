@@ -22,15 +22,6 @@ $(document).ready(function(){
 	});
 
 
-	// Выбор языка
-	$('.lange .eng').click(function(){
-		$('.lange').addClass('active');
-		return false;
-	});
-	$('.lange .rus').click(function(){
-		$('.lange').removeClass('active');
-		return false;
-	});
 
 	// открытие поиска
 	$('.search-head-open').click(function(){

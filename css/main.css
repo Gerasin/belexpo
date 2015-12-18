@@ -161,7 +161,7 @@ body {font: normal 18px "nerislight"; color: #000;}
             .slider-h {max-height: 214px; padding: 43px 0 12px; overflow: hidden; font: 60px/1.2em 'nerisblack'; margin: 0 0 32px; position: relative; z-index: 2;}
                 .slider-h a {border-bottom: 4px solid #00a1df;}
                 .slider-h a:hover {border-color: transparent;}
-            .slider-h2 {float: left; width: 247px; padding: 12px 50px 0 0; font-size: 18px; line-height: 26px; position: relative; z-index: 2;}
+            .slider-h2 {float: left; width: 197px; padding: 12px 100px 0 0; font-size: 18px; line-height: 26px; position: relative; z-index: 2;}
             .slider-date {width: 300px; position: absolute; z-index: 2; margin-top: -11px; left: 297px; top: 300px; padding-right: }
                 .sl-date-item {float: left; position: relative; height: 117px; color: #00a1df; font: 60px/70px 'nerisblack';}
                     .sl-date-item span {position: absolute;  top: 70px; left: 50%; margin-left: -50px; width: 100px; font: normal 18px "nerislight"; text-align: center;}
@@ -671,6 +671,10 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
         -moz-border-radius: 0;
         border-radius: 0;}
 
+}
+
+@media screen and (min-width: 767px) {
+    body .head-mob {display: none !important;}
 }
 
 @media screen and (max-width: 767px) {
