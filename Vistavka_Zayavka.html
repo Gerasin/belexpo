@@ -150,222 +150,225 @@
                 </div>
                 <div class="header-page">Заявка на участие в выставке</div>
                 <div><p>Все поля обозначенные<span class="col-orange">*</span> обязательные для заполнения</p></div>
-                <div class="form-tab">
-                    <div class="form-tab-header">Личные данные</div>
-                    <div class="form-tab-cont">
-                        <div class="form-tr">
-                            <div class="form-th">Полное название фирмы<span class="col-orange">*</span></div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st js-valid">
+                <form>
+                    <div class="form-tab">
+                        <div class="form-tab-header">Личные данные</div>
+                        <div class="form-tab-cont">
+                            <div id="company_name" class="form-tr">
+                                <div class="form-th">Полное название фирмы<span class="col-orange">*</span></div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st js-valid">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-tr">
-                            <div class="form-th">Юридический адрес<span class="col-orange">*</span></div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st js-valid">
+                            <div id="Legal_address" class="form-tr">
+                                <div class="form-th">Юридический адрес<span class="col-orange">*</span></div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st js-valid">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-tr">
-                            <div class="form-th">Почтовый адрес<span class="col-orange">*</span></div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st js-valid-mail">
+                            <div id="email_form" class="form-tr">
+                                <div class="form-th">Почтовый адрес<span class="col-orange">*</span></div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st js-valid-mail">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-tr">
-                            <div class="form-th">Страна<span class="col-orange">*</span></div>
-                            <div class="form-td">
-                                <div class="select-st">
-                                    <select name="" id="">
-                                        <option value="">Выбрать страну</option>
-                                        <option value="">Россия</option>
-                                        <option value="">Германия</option>
-                                    </select>
+                            <div id="country" class="form-tr">
+                                <div class="form-th">Страна<span class="col-orange">*</span></div>
+                                <div class="form-td">
+                                    <div class="select-st">
+                                        <select name="" id="">
+                                            <option value="">Россия</option>
+                                            <option value="">Германия</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="residence" class="form-tr">
+                                <div class="form-th">Резиденство<span class="col-orange">*</span></div>
+                                <div class="form-td form-td-check">
+                                    <input type="radio" name="radio_0" id="resedent_1" checked><label for="resedent_1">Резидент</label>
+                                    <input type="radio" name="radio_0" id="resedent_2"><label for="resedent_2">Нерезидент</label>
+                                </div>
+                            </div>
+                            <div id="bank_details" class="form-tr">
+                                <div class="form-th">Банковские реквизиты<span class="col-orange">*</span></div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st js-valid">
+                                </div>
+                            </div>
+                            <div id="adres_banka" class="form-tr">
+                                <div class="form-th">Адрес банка<span class="col-orange">*</span></div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st js-valid">
+                                </div>
+                            </div>
+                            <div id="UNP" class="form-tr">
+                                <div class="form-th">УНП<span class="col-orange">*</span></div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st js-valid">
+                                </div>
+                            </div>
+                            <div id="director_enterprise" class="form-tr">
+                                <div class="form-th">Директор предприятия<span class="col-orange">*</span></div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st js-valid">
+                                </div>
+                            </div>
+                            <div id="contact_person" class="form-tr">
+                                <div class="form-th">Контактное лицо<span class="col-orange">*</span></div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st js-valid">
+                                </div>
+                            </div>
+                            <div id="responsible_for_stand" class="form-tr">
+                                <div class="form-th">Ответственный за стенд<span class="col-orange">*</span></div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st js-valid">
+                                </div>
+                            </div>
+                            <div class="form-tr">
+                                <div class="form-th">Доверенность</div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st inp-dov" placeholder="№">
+                                    <input type="text" class="inp-st inp-dov" placeholder="от">
+                                </div>
+                            </div>
+                            <div class="form-border"><span>Дополнительная информация</span></div>
+                            <div class="form-tr">
+                                <div class="form-th">Краткое название фирмы</div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st" placeholder="Для надписи на фризе">
+                                </div>
+                            </div>
+                            <div class="form-tr">
+                                <div class="form-th">Юридическое лицо</div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st">
+                                </div>
+                            </div>
+                            <div class="form-tr">
+                                <div class="form-th">Действует на основании</div>
+                                <div class="form-td">
+                                    <div class="select-st">
+                                        <select name="" id="">
+                                            <option value="">Документ</option>
+                                            <option value="">Устав</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-tr">
+                                <div class="form-th">Кто подписывает данный договор</div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st" placeholder="со стороны Экспонента">
                                 </div>
                             </div>
                         </div>
-                        <div class="form-tr">
-                            <div class="form-th">Резиденство<span class="col-orange">*</span></div>
-                            <div class="form-td form-td-check">
-                                <input type="radio" name="radio_0" id="resedent_1" checked><label for="resedent_1">Резидент</label>
-                                <input type="radio" name="radio_0" id="resedent_2"><label for="resedent_2">Нерезидент</label>
+                    </div>
+                    <div class="form-tab">
+                        <div class="form-tab-header">Контактные данные</div>
+                        <div id="form_home_phone" class="form-tab-cont">
+                            <div class="form-tr">
+                                <div class="form-th">Телефон<span class="col-orange">*</span></div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st js-valid-phone-home">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-tr">
-                            <div class="form-th">Банковские реквизиты<span class="col-orange">*</span></div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st js-valid">
+                            <div id="form_mob_phone" class="form-tr">
+                                <div class="form-th">Мобильный телефон<span class="col-orange">*</span></div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st js-valid-phone">
+                                </div>
                             </div>
-                        </div>
-                        <div id="adres_banka" class="form-tr">
-                            <div class="form-th">Адрес банка<span class="col-orange">*</span></div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st js-valid">
+                            <div class="form-tr">
+                                <div class="form-th">Факс</div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-tr">
-                            <div class="form-th">УНП<span class="col-orange">*</span></div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st js-valid">
+                            <div class="form-tr">
+                                <div class="form-th">Электронная почта</div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-tr">
-                            <div class="form-th">Директор предприятия<span class="col-orange">*</span></div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st js-valid">
-                            </div>
-                        </div>
-                        <div class="form-tr">
-                            <div class="form-th">Контактное лицо<span class="col-orange">*</span></div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st js-valid">
-                            </div>
-                        </div>
-                        <div class="form-tr">
-                            <div class="form-th">Ответственный за стенд<span class="col-orange">*</span></div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st js-valid">
-                            </div>
-                        </div>
-                        <div class="form-tr">
-                            <div class="form-th">Доверенность</div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st inp-dov" placeholder="№">
-                                <input type="text" class="inp-st inp-dov" placeholder="от">
-                            </div>
-                        </div>
-                        <div class="form-border"><span>Дополнительная информация</span></div>
-                        <div class="form-tr">
-                            <div class="form-th">Краткое название фирмы</div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st" placeholder="Для надписи на фризе">
-                            </div>
-                        </div>
-                        <div class="form-tr">
-                            <div class="form-th">Юридическое лицо</div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st">
-                            </div>
-                        </div>
-                        <div class="form-tr">
-                            <div class="form-th">Действует на основании</div>
-                            <div class="form-td">
-                                <div class="select-st">
-                                    <select name="" id="">
-                                        <option value="">Документ</option>
-                                        <option value="">Устав</option>
-                                    </select>
+                            <div class="form-tr">
+                                <div class="form-th">Сайт</div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st">
                                 </div>
                             </div>
                         </div>
-                        <div class="form-tr">
-                            <div class="form-th">Кто подписывает данный договор</div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st" placeholder="со стороны Экспонента">
+                    </div>
+                    <div class="form-tab">
+                        <div class="form-tab-header">Стенды</div>
+                        <div class="form-tab-cont">
+                            <div class="form-tr">
+                                <div class="form-th">Типовой стенд</div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st inp-st-v">
+                                    <div class="form-v">м<span>2</span></div>
+                                </div>
+                            </div>
+                            <div class="form-tr">
+                                <div class="form-th">Оборудованная площадь</div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st inp-st-v">
+                                    <div class="form-v">м<span>2</span></div>
+                                </div>
+                            </div>
+                            <div class="form-tr">
+                                <div class="form-th">Необорудованная площадь</div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st inp-st-v">
+                                    <div class="form-v">м<span>2</span></div>
+                                </div>
+                            </div>
+                            <div class="form-tr">
+                                <div class="form-th">Открытая площадь</div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st inp-st-v">
+                                    <div class="form-v">м<span>2</span></div>
+                                </div>
+                            </div>
+                            <div class="form-tr">
+                                <div class="form-th">Субэкспоненты</div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st">
+                                </div>
+                            </div>
+                            <div class="form-dop">
+                                <div class="form-dop-h">Заказываемое дополнительное оборудование и услуги (перечень и цены указаны в Приложении №2)</div>
+                                <div class="form-dop-table">
+                                    <table>
+                                        <tr>
+                                            <th>Название</th>
+                                            <th class="last"><div class="mob-hide">Количество</div><div class="mob-show">Кол-во</div></th>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="table-inp"><input type="text" class="inp-st"></div></td>
+                                            <td class="form-namber"><input type="text" class="inp-st"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="table-inp"><input type="text" class="inp-st"></div></td>
+                                            <td class="form-namber"><input type="text" class="inp-st"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="table-inp"><input type="text" class="inp-st"></div></td>
+                                            <td class="form-namber"><input type="text" class="inp-st"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="form-tr-footer">
+                                <div class="form-tr-message">Осталось указать «
+                                    <span></span>
+                                »</div>
+                                <div class="form-tr-btn active"><button>Продолжить</button></div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-tab">
-                    <div class="form-tab-header">Контактные данные</div>
-                    <div class="form-tab-cont">
-                        <div class="form-tr">
-                            <div class="form-th">Телефон<span class="col-orange">*</span></div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st js-valid-phone-home">
-                            </div>
-                        </div>
-                        <div class="form-tr">
-                            <div class="form-th">Мобильный телефон<span class="col-orange">*</span></div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st js-valid-phone">
-                            </div>
-                        </div>
-                        <div class="form-tr">
-                            <div class="form-th">Факс</div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st">
-                            </div>
-                        </div>
-                        <div class="form-tr">
-                            <div class="form-th">Электронная почта</div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st">
-                            </div>
-                        </div>
-                        <div class="form-tr">
-                            <div class="form-th">Сайт</div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-tab">
-                    <div class="form-tab-header">Стенды</div>
-                    <div class="form-tab-cont">
-                        <div class="form-tr">
-                            <div class="form-th">Типовой стенд</div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st inp-st-v">
-                                <div class="form-v">м<span>2</span></div>
-                            </div>
-                        </div>
-                        <div class="form-tr">
-                            <div class="form-th">Оборудованная площадь</div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st inp-st-v">
-                                <div class="form-v">м<span>2</span></div>
-                            </div>
-                        </div>
-                        <div class="form-tr">
-                            <div class="form-th">Необорудованная площадь</div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st inp-st-v">
-                                <div class="form-v">м<span>2</span></div>
-                            </div>
-                        </div>
-                        <div class="form-tr">
-                            <div class="form-th">Открытая площадь</div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st inp-st-v">
-                                <div class="form-v">м<span>2</span></div>
-                            </div>
-                        </div>
-                        <div class="form-tr">
-                            <div class="form-th">Субэкспоненты</div>
-                            <div class="form-td">
-                                <input type="text" class="inp-st">
-                            </div>
-                        </div>
-                        <div class="form-dop">
-                            <div class="form-dop-h">Заказываемое дополнительное оборудование и услуги (перечень и цены указаны в Приложении №2)</div>
-                            <div class="form-dop-table">
-                                <table>
-                                    <tr>
-                                        <th>Название</th>
-                                        <th class="last"><div class="mob-hide">Количество</div><div class="mob-show">Кол-во</div></th>
-                                    </tr>
-                                    <tr>
-                                        <td><div class="table-inp"><input type="text" class="inp-st"></div></td>
-                                        <td class="form-namber"><input type="text" class="inp-st"></td>
-                                    </tr>
-                                    <tr>
-                                        <td><div class="table-inp"><input type="text" class="inp-st"></div></td>
-                                        <td class="form-namber"><input type="text" class="inp-st"></td>
-                                    </tr>
-                                    <tr>
-                                        <td><div class="table-inp"><input type="text" class="inp-st"></div></td>
-                                        <td class="form-namber"><input type="text" class="inp-st"></td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="form-tr-footer">
-                            <div class="form-tr-message">Осталось указать «<a href="#adres_banka">Адрес банка</a>»</div>
-                            <div class="form-tr-btn"><button>Продолжить</button></div> <!-- для активного состояния класс .active -->
-                        </div>
-                    </div>
-                </div>
+                </form>
             </div>
             <div class="clearfix"></div>
         </div>

@@ -86,14 +86,6 @@ $(document).ready(function(){
 
  	$('select').selectik({minScrollHeight: 20});
 
- 	// Якорь
- 	$('.form-tr-message a').click(function(){
-	    var anchor = $(this).attr('href');
-	    $('html, body').stop().animate({
-	        scrollTop: $(anchor).offset().top
-	    }, 1000);
- 		return false;
- 	});
 
  	// mobile menu
  	$('.menu-mob').click(function(){
@@ -270,10 +262,253 @@ $(document).ready(function(){
 			$('.listing-prev').addClass('listing-default');
 		};
 		return false;
-	})
+	});
+
+
+
+	// Валидация формы
+	$('.js-valid').focusout(function(){
+		var validText = $(this).val().length;
+		if(validText < 2) {
+			$(this).addClass('error-inp');
+		} else {
+			$(this).removeClass('error-inp');
+			errorLnk();
+		}
+	});
+	$('.js-valid-phone-home').focusout(function(){
+		var validText = $(this).val().length;
+		if(validText < 6) {
+			$(this).addClass('error-inp');
+		} else {
+			$(this).removeClass('error-inp');
+			errorLnk();
+		}
+	});
+	$('.js-valid-mail').focusout(function(){
+		var validText = $(this).val().length;
+		if(validText < 2) {
+			$(this).addClass('error-inp');
+		} else {
+			var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+            if(pattern.test($(this).val())){
+                $(this).removeClass('error-inp');
+                errorLnk();
+            } else {
+               	$(this).addClass('error-inp');
+            }
+		}
+	});
+
+	if($('.js-valid-phone').length) {
+		$('.js-valid-phone').mask("+375 00 000 00 00", {placeholder: "+375 __ ___ __ __"});
+	};
+	
+	$('.js-valid-phone').focusout(function(){
+		var validText = $(this).val().length;
+		if(validText < 17) {
+			$(this).addClass('error-inp');
+		} else {
+			$(this).removeClass('error-inp');
+			errorLnk();
+		}
+	});
+	if($('.js-valid-phone-home').length) {
+		$('.js-valid-phone-home').mask('000000000000');
+	}
+
+
+	// Активность кнопки формы
+	/*
+	$('.js-valid-phone, .js-valid-mail, .js-valid, .js-valid-phone-home').keypress(function(){
+		var validError = 0;
+		$('.js-valid').each(function(){
+			var validText = $(this).val().length;
+			if(validText < 2) {
+				validError = ++validError;
+			};
+		});
+		$('.js-valid-phone-home').each(function(){
+			var validText = $(this).val().length;
+			if(validText < 6) {
+				validError = ++validError;
+			};
+		});
+
+		$('.js-valid-mail').each(function(){
+			var validText = $(this).val().length;
+			if(validText < 2) {
+				validError = ++validError;
+			} else {
+				var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+	            if(pattern.test($(this).val())) {} else {
+	               	validError = ++validError;
+	            }
+			}
+		});
+		$('.js-valid-phone').each(function(){
+			var validText = $(this).val().length;
+			if(validText < 17) {
+				validError = ++validError;
+			}
+		});
+		if (validError == 0) {
+			$('.form-tr-btn').addClass('active');
+		} else {
+			$('.form-tr-btn').removeClass('active');
+		};
+	}); */
+
+	$('.form-tr-btn button').click(function(){
+		errorSearch();
+		return false;
+	});
 
 
 });
+function errorSearch() {
+	var validError = 0;
+	$('.form-tr-message span').text('');
+	$('.js-valid').each(function(){
+		var validText = $(this).val().length;
+		if(validText < 2) {
+			validError = ++validError;
+			$(this).addClass('error-inp');
+			var ErrorHead = $(this).parents('.form-tr').find('.form-th').text().slice(0, -1);
+			var ErrorId = '#' + $(this).parents('.form-tr').attr('id');
+			ErrorHead = '<a href="' + ErrorId + '">' + ErrorHead + '</a><em>,</em> ';
+			$('.form-tr-message span').append(ErrorHead);
+		};
+	});
+	$('.js-valid-phone-home').each(function(){
+		var validText = $(this).val().length;
+		if(validText < 6) {
+			validError = ++validError;
+			$(this).addClass('error-inp');
+			var ErrorHead = $(this).parents('.form-tr').find('.form-th').text().slice(0, -1);
+			var ErrorId = '#' + $(this).parents('.form-tr').attr('id');
+			ErrorHead = '<a href="' + ErrorId + '">' + ErrorHead + '</a><em>,</em> ';
+			$('.form-tr-message span').append(ErrorHead);
+		};
+	});
+
+	$('.js-valid-mail').each(function(){
+		var validText = $(this).val().length;
+		if(validText < 2) {
+			validError = ++validError;
+			$(this).addClass('error-inp');
+			var ErrorHead = $(this).parents('.form-tr').find('.form-th').text().slice(0, -1);
+			var ErrorId = '#' + $(this).parents('.form-tr').attr('id');
+			ErrorHead = '<a href="' + ErrorId + '">' + ErrorHead + '</a><em>,</em> ';
+			$('.form-tr-message span').append(ErrorHead);
+		} else {
+			var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+            if(pattern.test($(this).val())) {} else {
+               	validError = ++validError;
+               	$(this).addClass('error-inp');
+               	var ErrorHead = $(this).parents('.form-tr').find('.form-th').text().slice(0, -1);
+				var ErrorId = '#' + $(this).parents('.form-tr').attr('id');
+				ErrorHead = '<a href="' + ErrorId + '">' + ErrorHead + '</a><em>,</em> ';
+				$('.form-tr-message span').append(ErrorHead);
+            }
+		}
+	});
+	$('.js-valid-phone').each(function(){
+		var validText = $(this).val().length;
+		if(validText < 17) {
+			validError = ++validError;
+			$(this).addClass('error-inp');
+			var ErrorHead = $(this).parents('.form-tr').find('.form-th').text().slice(0, -1);
+			var ErrorId = '#' + $(this).parents('.form-tr').attr('id');
+			ErrorHead = '<a href="' + ErrorId + '">' + ErrorHead + '</a><em>,</em> ';
+			$('.form-tr-message span').append(ErrorHead);
+		}
+	});
+	// Якорь
+ 	$('.form-tr-message a').click(function(){
+	    var anchor = $(this).attr('href');
+	    $('html, body').stop().animate({
+	        scrollTop: $(anchor).offset().top
+	    }, 1000);
+ 		return false;
+ 	});
+	$('.form-tr-message em:last').hide();
+	if (validError == 0) {
+		$('.form-tr-message').hide();
+	} else {
+		$('.form-tr-message').show();
+		return false;
+	};
+}
+function errorLnk() {
+	var validError = 0;
+	$('.form-tr-message span').text('');
+	$('.js-valid').each(function(){
+		var validText = $(this).val().length;
+		if(validText < 2) {
+			validError = ++validError;
+			var ErrorHead = $(this).parents('.form-tr').find('.form-th').text().slice(0, -1);
+			var ErrorId = '#' + $(this).parents('.form-tr').attr('id');
+			ErrorHead = '<a href="' + ErrorId + '">' + ErrorHead + '</a><em>,</em> ';
+			$('.form-tr-message span').append(ErrorHead);
+		};
+	});
+	$('.js-valid-phone-home').each(function(){
+		var validText = $(this).val().length;
+		if(validText < 6) {
+			validError = ++validError;
+			var ErrorHead = $(this).parents('.form-tr').find('.form-th').text().slice(0, -1);
+			var ErrorId = '#' + $(this).parents('.form-tr').attr('id');
+			ErrorHead = '<a href="' + ErrorId + '">' + ErrorHead + '</a><em>,</em> ';
+			$('.form-tr-message span').append(ErrorHead);
+		};
+	});
+
+	$('.js-valid-mail').each(function(){
+		var validText = $(this).val().length;
+		if(validText < 2) {
+			validError = ++validError;
+			var ErrorHead = $(this).parents('.form-tr').find('.form-th').text().slice(0, -1);
+			var ErrorId = '#' + $(this).parents('.form-tr').attr('id');
+			ErrorHead = '<a href="' + ErrorId + '">' + ErrorHead + '</a><em>,</em> ';
+			$('.form-tr-message span').append(ErrorHead);
+		} else {
+			var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+            if(pattern.test($(this).val())) {} else {
+               	validError = ++validError;
+               	var ErrorHead = $(this).parents('.form-tr').find('.form-th').text().slice(0, -1);
+				var ErrorId = '#' + $(this).parents('.form-tr').attr('id');
+				ErrorHead = '<a href="' + ErrorId + '">' + ErrorHead + '</a><em>,</em> ';
+				$('.form-tr-message span').append(ErrorHead);
+            }
+		}
+	});
+	$('.js-valid-phone').each(function(){
+		var validText = $(this).val().length;
+		if(validText < 17) {
+			validError = ++validError;
+			var ErrorHead = $(this).parents('.form-tr').find('.form-th').text().slice(0, -1);
+			var ErrorId = '#' + $(this).parents('.form-tr').attr('id');
+			ErrorHead = '<a href="' + ErrorId + '">' + ErrorHead + '</a><em>,</em> ';
+			$('.form-tr-message span').append(ErrorHead);
+		}
+	});
+	// Якорь
+ 	$('.form-tr-message a').click(function(){
+	    var anchor = $(this).attr('href');
+	    $('html, body').stop().animate({
+	        scrollTop: $(anchor).offset().top
+	    }, 1000);
+ 		return false;
+ 	});
+	$('.form-tr-message em:last').hide();
+	if (validError == 0) {
+		$('.form-tr-message').hide();
+	} else {
+		$('.form-tr-message').show();
+		return false;
+	};
+}
 
 $(window).load(function(){
 	$('.tab-page:not(:first)').hide();
@@ -315,46 +550,6 @@ function textHeight() {
 	if(indexStart > 0) {
 		textHeight();
 	};
-
-
-	// Валидация формы
-	$('.js-valid, .js-valid-phone-home').focusout(function(){
-		var validText = $(this).val().length;
-		if(validText < 2) {
-			$(this).addClass('error-inp');
-		} else {
-			$(this).removeClass('error-inp');
-		}
-	});
-	$('.js-valid-mail').focusout(function(){
-		var validText = $(this).val().length;
-		if(validText < 2) {
-			$(this).addClass('error-inp');
-		} else {
-			var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
-            if(pattern.test($(this).val())){
-                $(this).removeClass('error-inp');
-            } else {
-               	$(this).addClass('error-inp');
-            }
-		}
-	});
-
-	if($('.js-valid-phone').length) {
-		$('.js-valid-phone').mask("+375 00 000 00 00", {placeholder: "+375 __ ___ __ __"});
-	};
-	
-	$('.js-valid-phone').focusout(function(){
-		var validText = $(this).val().length;
-		if(validText < 17) {
-			$(this).addClass('error-inp');
-		} else {
-			$(this).removeClass('error-inp');
-		}
-	});
-	if($('.js-valid-phone-home').length) {
-		$('.js-valid-phone-home').mask('000000000000');
-	}
 
 };
 
