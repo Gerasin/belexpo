@@ -303,7 +303,7 @@ body {font: normal 18px "nerislight"; color: #000;}
             .listing-arrow a:hover {color: #00a1df; border: none;}
             .listing-default {overflow: hidden; height: 2px; opacity: 0;}
         .listing-lnk {display: inline-block; padding: 0;}
-            .listing-lnk li {padding: 0 3px; list-style: none; display: none;}
+            .listing-lnk li {padding: 0 3px; list-style: none; display: inline-block;}
             .listing-lnk li.lnk-show {display: inline-block;}
                 .listing-lnk li a {display: block; height: 40px; line-height: 40px; min-width: 30px; padding: 0 5px; text-align: center; border: 0;}
                 .listing-lnk li a:hover {background: #ccecf9;}
