@@ -435,6 +435,7 @@ function errorSearch() {
 	$('.form-tr-message em:last').hide();
 	if (validError == 0) {
 		$('.form-tr-message').hide();
+		
 	} else {
 		$('.form-tr-message').show();
 		return false;
@@ -511,7 +512,6 @@ function errorLnk() {
 }
 
 $(window).load(function(){
-	$('.tab-page:not(:first)').hide();
 
 	if($('.photo-page').length) {
 	  var $grid = $('.photo-page').isotope({
@@ -521,6 +521,8 @@ $(window).load(function(){
 	    transformsEnabled : true
 	  });
 	};
+
+	$('.tab-page:not(:first)').hide();
 });
 
 
