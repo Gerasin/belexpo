@@ -155,14 +155,14 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
 .slider-main {overflow: hidden; margin: 0 0 37px;}
     .slider-main a {outline: none;}
     .slider-main .slick-list {overflow: inherit;}
-    .slider {position: relative; width: 1200px; margin: 0 auto;}
-        .slider-item {float: left; width: 1170px; height: 500px; position: relative; margin: 0 15px;}
-            .slider-item:before {position: absolute; top: 0; left: 0; bottom: 0; width: 200px; background: #fff; content: ' '; z-index: 2;}
+    .slider {position: relative; width: 1170px; margin: 0 auto;}
+        .slider-item {float: left; width: 1170px; height: 500px; position: relative; margin: 0;}
+            /*.slider-item:before {position: absolute; top: 0; left: -30px; bottom: 0; width: 200px; background: #fff; content: ' '; z-index: 2;}*/
             .sl-img {position: absolute; top: 0; right: 0; z-index: 1;}
             .slider-h {max-height: 214px; padding: 43px 0 12px; overflow: hidden; font: 60px/1.2em 'nerisblack'; margin: 0 0 32px; position: relative; z-index: 2;}
                 .slider-h a {border-bottom: 4px solid #00a1df;}
                 .slider-h a:hover {border-color: transparent;}
-            .slider-h2 {float: left; width: 197px; padding: 12px 100px 0 0; font-size: 18px; line-height: 26px; position: relative; z-index: 2;}
+            .slider-h2 {float: left; width: 200px; height: 200px; padding: 300px 0 0 30px; top: 0; left: -30px; font-size: 18px; line-height: 26px; position: absolute; z-index: 1; background: #fff;}
             .slider-date {width: 300px; position: absolute; z-index: 2; margin-top: -11px; left: 297px; top: 300px; padding-right: }
                 .sl-date-item {float: left; position: relative; height: 117px; color: #00a1df; font: 60px/70px 'nerisblack';}
                     .sl-date-item span {position: absolute;  top: 70px; left: 50%; margin-left: -50px; width: 100px; font: normal 18px "nerislight"; text-align: center;}
@@ -573,6 +573,8 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
 .slick-slide .slider-h2, .slick-slide .slider-date {opacity: 0;}
 .slick-active .slider-h {display: block;}
 .slick-active .slider-h2, .slick-active .slider-date {opacity: 1;}
+.slider-item:before {opacity: 0;}
+.slick-active.slider-item:before {opacity: 1;}
 .head-inner .slider-item:before {display: none;}
 
 .head-mob .delivery-form {padding-top: 20px; margin-right: -15px;}
