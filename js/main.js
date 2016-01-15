@@ -116,6 +116,7 @@ $(document).ready(function(){
 		$(".message").fadeOut();
 		return false;
 	});
+	/*
  	$('.delivery-btn').click(function() {
  		$(".message").fadeOut();
  		var inpEmail = $('.delivery-inp');
@@ -133,7 +134,7 @@ $(document).ready(function(){
 		};
 		setTimeout('$(".message").fadeOut()', 9000);
 		return false;
-	});
+	});*/
 
 	textHeight();
 
@@ -271,8 +272,10 @@ $(document).ready(function(){
 		var validText = $(this).val().length;
 		if(validText < 2) {
 			$(this).addClass('error-inp');
+			$(this).parents('.form-inp').addClass('item-error');
 		} else {
 			$(this).removeClass('error-inp');
+			$(this).parents('.form-inp').removeClass('item-error');
 			errorLnk();
 		}
 	});
@@ -282,6 +285,7 @@ $(document).ready(function(){
 			$(this).addClass('error-inp');
 		} else {
 			$(this).removeClass('error-inp');
+			$(this).parents('.form-inp').removeClass('item-error');
 			errorLnk();
 		}
 	});
@@ -293,6 +297,7 @@ $(document).ready(function(){
 			var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
             if(pattern.test($(this).val())){
                 $(this).removeClass('error-inp');
+                $(this).parents('.form-inp').removeClass('item-error');
                 errorLnk();
             } else {
                	$(this).addClass('error-inp');
@@ -318,52 +323,26 @@ $(document).ready(function(){
 	}
 
 
-	// Активность кнопки формы
-	/*
-	$('.js-valid-phone, .js-valid-mail, .js-valid, .js-valid-phone-home').keypress(function(){
-		var validError = 0;
-		$('.js-valid').each(function(){
-			var validText = $(this).val().length;
-			if(validText < 2) {
-				validError = ++validError;
-			};
-		});
-		$('.js-valid-phone-home').each(function(){
-			var validText = $(this).val().length;
-			if(validText < 6) {
-				validError = ++validError;
-			};
-		});
-
-		$('.js-valid-mail').each(function(){
-			var validText = $(this).val().length;
-			if(validText < 2) {
-				validError = ++validError;
-			} else {
-				var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
-	            if(pattern.test($(this).val())) {} else {
-	               	validError = ++validError;
-	            }
-			}
-		});
-		$('.js-valid-phone').each(function(){
-			var validText = $(this).val().length;
-			if(validText < 17) {
-				validError = ++validError;
-			}
-		});
-		if (validError == 0) {
-			$('.form-tr-btn').addClass('active');
-		} else {
-			$('.form-tr-btn').removeClass('active');
-		};
-	}); */
-
-	$('.form-tr-btn button').click(function(){
+	$('.form-tr-btn button, .valid-button').click(function(){
 		errorSearch();
 		return false;
 	});
 
+	// Валидация почты
+
+	$('.delivery-btn').click(function(){
+		$('.delivery-inp').each(function(){
+			var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+            if(pattern.test($(this).val())){
+                $(this).parents('.delivery-form').removeClass('act-erro');
+                $('.delivery-form, .delivery-h').hide();
+                $('.delivery-next-txt').show();
+            } else {
+               	$(this).parents('.delivery-form').addClass('act-erro');
+            }
+		});
+		return false;
+	});
 
 });
 function errorSearch() {
@@ -374,6 +353,7 @@ function errorSearch() {
 		if(validText < 2) {
 			validError = ++validError;
 			$(this).addClass('error-inp');
+			$(this).parents('.form-inp').addClass('item-error');
 			var ErrorHead = $(this).parents('.form-tr').find('.form-th').text().slice(0, -1);
 			var ErrorId = '#' + $(this).parents('.form-tr').attr('id');
 			ErrorHead = '<a href="' + ErrorId + '">' + ErrorHead + '</a><em>,</em> ';
@@ -397,6 +377,7 @@ function errorSearch() {
 		if(validText < 2) {
 			validError = ++validError;
 			$(this).addClass('error-inp');
+			$(this).parents('.form-inp').addClass('item-error');
 			var ErrorHead = $(this).parents('.form-tr').find('.form-th').text().slice(0, -1);
 			var ErrorId = '#' + $(this).parents('.form-tr').attr('id');
 			ErrorHead = '<a href="' + ErrorId + '">' + ErrorHead + '</a><em>,</em> ';

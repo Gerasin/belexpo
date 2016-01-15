@@ -107,7 +107,7 @@ a {color: #000; text-decoration: none; border-bottom: 1px solid #00a1df;}
 a:hover {border-color: transparent;}
 strong {font-family: 'nerisblack';}
 
-body {font: normal 18px "nerislight"; color: #000;}
+body {font: normal 18px "nerislight"; color: #000; position: relative; min-height:100%; height:auto !important; height:100%;}
 
 
 .wr {width: 1170px; margin: 0 auto; padding: 0 20px;}
@@ -136,7 +136,8 @@ body {font: normal 18px "nerislight"; color: #000;}
         .search-head button {position: absolute; border: 0; margin: 0; padding: 0; outline: none; background: url(../img/btn-search.png) 0 0 no-repeat; width: 20px; height: 21px; top: 13px; right: 18px;}
         .search-head .search-head-open {position: absolute; width: 20px; height: 21px; top: 13px; right: 18px; border: 0;}
         .search-head.active .search-head-open {display: none;}
-.footer {background: #d9e7ec; padding: 32px 0 34px; margin: 30px 0 0;}
+.footer-padding {height: 303px; clear: both;}
+.footer {background: #d9e7ec; padding: 32px 0 34px; margin: 30px 0 0; position: absolute; width: 100%; bottom: 0;}
     .copyright {float: left; width: 300px; font-size: 14px; line-height: 20px; color: #240a2b;padding: 2px 0 0;}
         .copyright span {margin: 0 0 0 -14px; width: 14px; display: inline-block;}
     .menu-footer {float: left; width: 910px; margin-right: -40px; position: relative; z-index: 10;}
@@ -215,6 +216,10 @@ body {font: normal 18px "nerislight"; color: #000;}
         .delivery-btn {display: block; border: 0; outline: none; background: url(../img/delivery-btn.gif) 0 0 no-repeat; width: 44px; height: 26px;}
         .delivery-btn:hover {opacity: 0.6;}
         .delivery-btn:active {opacity: 0.8;}
+        .delivery-error, .delivery-ok {font-size: 12px; padding-top: 7px; margin-bottom: -4px; display: none; margin-bottom: -17px;}
+        .act-erro .delivery-error {display: block;}
+        .act-erro .delivery-inp {background: #ffdfdf;}
+        .delivery-next-txt {text-align: center; padding-right: 30px; font-size: 15px; display: none; color: #fff;}
     .baner {margin: 0 0 20px; overflow: hidden;}
         .baner a {vertical-align: top;}
             .baner a img {vertical-align: top; width: 100%;}
@@ -243,18 +248,23 @@ body {font: normal 18px "nerislight"; color: #000;}
     .feedback-form {background: #f1f1f1; padding: 17px 20px 20px;}
         .form-h {padding: 0 0 5px; font-size: 14px;}
             .col-orange {color: #ff9900;}
-        .form-inp {padding: 0 0 18px;}
+        .form-inp {padding: 0 0 18px; position: relative;}
+            .form-error {position: absolute; right: 0; bottom: 3px; color: #e31010; font-size: 12px; display: none;}
+            .item-error .form-error {display: block;}
         .form-captcha {padding: 0 0 20px;}
             .captcha-img {float: left; border: 1px solid #9cb6bb;}
             .captcha-inp {float: right; width: 90px;}
         .form-btn {width: 100%; height: 40px; background: #ff9900; color: #fff; text-align: center; color: #fff; outline: none; font: normal 18px/37px "nerislight"; padding-bottom: 3px; display: block; border: 0;}
         .form-btn:hover {background: #ffa927;}
         .form-btn:active {background: #ec8e00;}
+    .obligatory_filling {padding: 17px 0 0; font-size: 14px;}
+
+        .feedback-ok {line-height: 22px; color: #09931f; text-align: center;}
 .inp-st {width: 100%; height: 40px; background-color: #fff; border: 1px solid #cdcdcd; padding: 0 0 0 10px; font: normal 18px "nerislight";
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;}
-.error-inp {border-color: #f4b3b3; color: #e31010;}
+.error-inp {border-color: #f4b3b3 !important; color: #e31010 !important;}
 .inp-st:focus, textarea:focus {outline: none; border-color: #8e8e8e; color: #222;}
 .textar-st {
     width: 100%;
@@ -450,12 +460,14 @@ body {font: normal 18px "nerislight"; color: #000;}
                 .form-dop-table table th.last {border-right: 1px solid #cdcdcd;}
                 .table-inp {margin-right: -1px;}
     .form-namber {width: 186px;}
-.filter {margin-left: -44px; padding: 0 0 26px; min-height: 50px;}
+.filter {margin-left: -44px; padding: 0 0 26px; min-height: 50px; margin-top: -13px;}
     .filter-item {float: left; padding: 0 0 0 44px;}
         .filter-h {float: left; padding: 0 17px 0 0; height: 40px; line-height: 40px;}
         .filter-select {float: left;}
-            .filter-select select {padding-right: 5px; max-width: 170px;}
+            .filter-select select {padding-right: 5px; max-width: 370px;}
+                .filter-select select option {padding-right: 80px;}
                 .filter-month .custom-text {width: 125px !important;}
+                .filter-select .custom-text {width: auto !important; padding-right: 40px;}
             .custom-select li {white-space: nowrap; padding: 8px 20px 9px 30px;}
             .custom-select li:hover {background: #f1f1f1;}
             .custom-select li.selected {background: #00a1df; color: #fff; position: relative;}
@@ -467,7 +479,7 @@ body {font: normal 18px "nerislight"; color: #000;}
                 box-shadow: 0 2px 10px rgba(0,0,0,.1);}
             .filter-select .select-list.custom-scroll {right: 5px;}
             .custom-select .custom-text:before {position: absolute; content: ' '; top: 6px; right: 6px; width: 29px; border-left: 1px solid #cdcdcd; height: 28px; background: #fff;}
-    .exhibition {position: relative; max-height: 886px; overflow: auto;}
+    .exhibition {position: relative; padding-bottom: 32px; /*max-height: 886px; overflow: auto;*/}
         .exhibition-in {position: relative;}
         .exhibition-in:before {position: absolute; top: 0; bottom: 20px; left: 60px; width: 20px; content: ' '; background: url(../img/exhibition-border.gif) 0 0 repeat-y;}
         .exhibition-date {position: relative; padding: 0 0 18px 100px;}
@@ -493,6 +505,8 @@ body {font: normal 18px "nerislight"; color: #000;}
 .message-green {background: #6ec987;} 
 .message-red {background: #f4b3b3;} 
     .message-close {position: absolute; top: 13px; right: 10px; width: 15px; height: 15px; background: url(../img/message-close.png) 0 0 no-repeat; border: 0;}
+
+.baner-big-right {margin: -144px 0 0 300px; top: -31px; position: relative;}
 
 .grid {margin: 0 -15px;}
     .grid-column {float: left; width: 270px; margin: 0 15px;}

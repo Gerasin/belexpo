@@ -337,25 +337,30 @@
                 <div class="feedback">
                     <div class="feedback-h">Обратная связь</div>
                     <div class="feedback-form">
-                        <div class="form-h">Имя</div>
-                        <div class="form-inp"><input type="text" class="inp-st"></div>
-                        <div class="form-h">Электронная почта<span class="col-orange">*</span></div>
-                        <div class="form-inp"><input type="text" class="inp-st"></div>
-                        <div class="form-h">Сообщение<span class="col-orange">*</span></div>
-                        <div class="form-inp"><textarea name="" id="" cols="30" rows="10" class="textar-st"></textarea></div>
-                        <div class="form-h">Код с картинки</div>
-                        <div class="form-captcha">
-                            <div class="captcha-img"><img src="img/captcha.jpg" alt=""></div>
-                            <div class="captcha-inp"><input type="text" class="inp-st"></div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <button class="form-btn">Отправить</button>
+                        <form action="">
+                            <div class="form-h">Имя<span class="col-orange">*</span></div>
+                            <div class="form-inp"><input type="text" class="inp-st js-valid"><div class="form-error">Неверное значение</div></div>
+                            <div class="form-h">Электронная почта<span class="col-orange">*</span></div>
+                            <div class="form-inp"><input type="text" class="inp-st js-valid-mail"><div class="form-error">Неверное значение</div></div>
+                            <div class="form-h">Сообщение<span class="col-orange">*</span></div>
+                            <div class="form-inp"><textarea name="" id="" cols="30" rows="10" class="textar-st js-valid"></textarea><div class="form-error">Неверное значение</div></div>
+                            <div class="form-h">Код с картинки<span class="col-orange">*</span></div>
+                            <div class="form-captcha form-inp">
+                                <div class="captcha-img"><img src="img/captcha.jpg" alt=""></div>
+                                <div class="captcha-inp"><input type="text" class="inp-st js-valid"><div class="form-error">Неверное значение</div></div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <button class="form-btn valid-button">Отправить</button>
+                            <div class="obligatory_filling">Поля, обозначенные <span class="col-orange">*</span> являются обязательными для заполнения</div>
+                        </form>
                     </div>
+                    <div class="feedback-ok">Ваше сообщение успешно отправленно!</div>
                 </div>
             </div>
             <div class="clearfix"></div>
         </div>
 
+        <div class="footer-padding"></div>
         <div class="footer">
             <div class="wr">
                 <div class="copyright"><span>©</span> 2015<br> Национальный<br> выставочный центр<br> «БелЭкспо»</div>
