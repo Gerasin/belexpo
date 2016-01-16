@@ -138,6 +138,7 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
         .search-head.active .search-head-open {display: none;}
 .footer-padding {height: 303px; clear: both;}
 .footer {background: #d9e7ec; padding: 32px 0 34px; margin: 30px 0 0; position: absolute; width: 100%; bottom: 0;}
+    .footer .wr {position: relative;}
     .copyright {float: left; width: 300px; font-size: 14px; line-height: 20px; color: #240a2b;padding: 2px 0 0;}
         .copyright span {margin: 0 0 0 -14px; width: 14px; display: inline-block;}
     .menu-footer {float: left; width: 910px; margin-right: -40px; position: relative; z-index: 10;}
@@ -149,6 +150,8 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
     .development {font-size: 14px;top: -31px;position: relative;}
         .development a {color: #000; text-decoration: none; border-bottom: 1px solid #00a1df;}
         .development a:hover {border-color: transparent;}
+    .lnk-map {position: absolute; top: 130px; left: 20px; font-size: 14px;}
+    
 
 
 
@@ -462,7 +465,7 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
                 .table-inp {margin-right: -1px;}
     .form-namber {width: 186px;}
 .filter {margin-left: -44px; padding: 0 0 26px; min-height: 50px; margin-top: -13px;}
-    .filter-item {float: left; padding: 0 0 0 44px;}
+    .filter-item {padding: 0 0 0 44px; display: inline-block;}
         .filter-h {float: left; padding: 0 17px 0 0; height: 40px; line-height: 40px;}
         .filter-select {float: left;}
             .filter-select select {padding-right: 5px; max-width: 370px;}
@@ -485,7 +488,7 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
         .exhibition-in:before {position: absolute; top: 0; bottom: 20px; left: 60px; width: 20px; content: ' '; background: url(../img/exhibition-border.gif) 0 0 repeat-y;}
         .exhibition-date {position: relative; padding: 0 0 18px 100px;}
             .exhibition-date-namber {position: absolute; top: -6px; left: 0;}
-            .exhibition-cont {background: #f3f3f3; margin: 0 0 2px; padding: 17px 20px 7px;}
+            .exhibition-cont {background: #f3f3f3; margin: 0 0 2px; padding: 17px 20px 7px; overflow: hidden;}
                 .exhibition-d {padding: 0 0 5px; font-size: 14px; color: #888;}
                 .exhibition-h {padding: 0 0 7px; font-size: 18px; color: #ff9900;}
                     .exhibition-h a {color: #ff9900; border-bottom: 1px solid #ff9900;}
@@ -586,6 +589,8 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
 
 .header-filter {padding: 0 0 10px; font-weight: bold; color: #00a1df;}
 
+.exhibition-logo {float: left; padding-right: 10px;}
+
 
 @media screen and (max-width: 1200px) {
     .wr {width: auto; padding: 0 20px;}
@@ -662,6 +667,7 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
     .select-st select {border: 1px solid #cdcdcd; height: 40px; background-size: #fff;}
     .inp-dov {margin-bottom: 10px;}
     .head {height: 90px;}
+    .lnk-map {left: auto; top: auto; bottom: 0px; right: 250px;}
 
 
 }
@@ -688,6 +694,7 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
         border-radius: 0;}
+
 
 }
 
@@ -844,6 +851,8 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
 
     .footer-padding {display: none;}
     .footer {position: relative;}
+    .lnk-map {position: relative; bottom: auto; right: auto; padding-bottom: 5px;}
+
     
 }
 
