@@ -590,7 +590,7 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
 .header-filter {padding: 0 0 10px; font-weight: bold; color: #00a1df;}
 
 .exhibition-logo {float: left; padding-right: 10px;}
-
+    .exhibition-logo img {vertical-align: top; max-width: 50px;}
 
 @media screen and (max-width: 1200px) {
     .wr {width: auto; padding: 0 20px;}
