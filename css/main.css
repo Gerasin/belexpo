@@ -303,7 +303,7 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
             .menu-left li a:hover {background: #cde3ec;}
         .menu-left li.active {padding: 0 0 5px; font-family: 'nerisblack';} 
             .menu-left li.active a, .menu-left li.active span {background: #fff; border: 3px solid #00a1df; padding: 9px 0 11px 16px; color: #00a1df;}
-.right-column-inner {float: right; width: 870px;}
+.right-column-inner {float: right; width: 870px; padding-bottom: 190px !important;}
     .crubs {padding: 0px 0 34px; font-size: 14px; color: #888; margin: -4px 0 0; line-height: 24px; position: relative; top: -2px;}
         .crubs a {border-color: #868686;}
         .crubs a:hover {border-color: transparent;}
@@ -852,6 +852,7 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
     .footer-padding {display: none;}
     .footer {position: relative;}
     .lnk-map {position: relative; bottom: auto; right: auto; padding-bottom: 5px;}
+    .right-column-inner {padding-bottom: 0 !important;}
 
     
 }
