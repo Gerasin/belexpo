@@ -840,6 +840,9 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
     .mob-hide {display: none;}
     .photo-page {margin: 0 -7px;}
     .photo-box {padding: 0 7px 7px; width: 50%;}
+
+    .footer-padding {display: none;}
+    .footer {position: relative;}
     
 }
 
