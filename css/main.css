@@ -543,6 +543,7 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
             .grid-date-one  .grid-date-bold span {font-family: 'nerisblack' !important; font-size: 24px; padding-top: 0; margin-top: -1px;}
     .grid-2-2 .grid-h a {font-size: 36px; line-height: 42px;}
 .js-menu-tabs .active {display: none;}
+    .contact-baner .baner-big-right {margin: 0;}
 
 
 input[type='radio'] {position: absolute; left: -10000px;}
