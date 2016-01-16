@@ -303,7 +303,7 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
             .menu-left li a:hover {background: #cde3ec;}
         .menu-left li.active {padding: 0 0 5px; font-family: 'nerisblack';} 
             .menu-left li.active a, .menu-left li.active span {background: #fff; border: 3px solid #00a1df; padding: 9px 0 11px 16px; color: #00a1df;}
-.right-column-inner {float: right; width: 870px; padding-bottom: 190px !important;}
+.right-column-inner {float: right; width: 870px; padding-bottom: 190px !important; margin-bottom: -170px;}
     .crubs {padding: 0px 0 34px; font-size: 14px; color: #888; margin: -4px 0 0; line-height: 24px; position: relative; top: -2px;}
         .crubs a {border-color: #868686;}
         .crubs a:hover {border-color: transparent;}
@@ -379,7 +379,7 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
             .pay-namber-item {}
                 .pay-namber-item strong {color: #00a1df; font-size: 36px;}
                     .pay-namber-item strong span {font-size: 24px; font-family: 'nerislight';}
-    .share-soc {padding: 30px 0 7px; position: relative; overflow: hidden; margin: -42px 0 0;}
+    .share-soc {padding: 30px 0 7px; position: relative; overflow: hidden; /*margin: -42px 0 0;*/}
         .share-soc:before {position: absolute; top: 0; left: 0; right: 0; height: 2px; content: ' '; background: #ffb000 url(../img/share-border.png) 0 0 no-repeat;}
         .share-soc-h {float: left; height: 50px; font: 24px/50px 'nerisblack'; padding: 0 35px 0 0;}
         .share-soc ul {padding: 0; margin: 0; display: inline-block;}
@@ -510,7 +510,7 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
 .message-red {background: #f4b3b3;} 
     .message-close {position: absolute; top: 13px; right: 10px; width: 15px; height: 15px; background: url(../img/message-close.png) 0 0 no-repeat; border: 0;}
 
-.baner-big-right {margin: -144px 0 0 300px; top: -31px; position: relative;}
+.baner-big-right {margin: 0 0 0 300px; position: relative;}
 
 .grid {margin: 0 -15px;}
     .grid-column {float: left; width: 270px; margin: 0 15px;}
