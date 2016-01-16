@@ -232,6 +232,7 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
         .baner-big.baner-bor-blue {border: 15px solid #00a1df;}
         .baner-big.baner-bor-green {border: 15px solid #378959;}
         .baner-big.baner-bor-yellow {border: 0;}
+    .wr-center-main .baner-big-right {top: auto; margin: 0; }
 
 .head-inner {background: url(../img/head_bg.jpg) 0 100% repeat-x; margin-bottom: 30px;
     background: rgb(255, 255, 255);
