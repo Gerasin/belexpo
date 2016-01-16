@@ -154,7 +154,7 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
     
 
 
-
+.slick-slide img {width: 100%;}
 .slider-main {overflow: hidden; margin: 0 0 37px;}
     .slider-main a {outline: none;}
     .slider-main .slick-list {overflow: inherit;}
