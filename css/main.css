@@ -860,6 +860,10 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
     .lnk-map {position: relative; bottom: auto; right: auto; padding-bottom: 5px;}
     .right-column-inner {padding-bottom: 0 !important;}
     .map-columns td {display: block; padding-left: 0;}
+    .map-columns ul {margin-left: -30px;}
+    .map-columns ul ul {margin-left: 0;}
+    .map-columns ul li {background: url(../img/marker.png) 18px 9px no-repeat;}
+    
     
 }
 
