@@ -595,6 +595,7 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
     .exhibition-logo img {vertical-align: top; max-width: 50px;}
 .page-txt-logo {float: left; border: 1px solid #dadada; max-width: 98px; max-height: 98px; margin: 6px 20px 10px 0;}
     .page-txt-logo img {max-width: 100%; max-height: 100%; vertical-align: top;}
+.map-columns ul li {background: url(../img/marker.png) 18px 13px no-repeat;}
 
 @media screen and (max-width: 1200px) {
     .wr {width: auto; padding: 0 20px;}
@@ -858,7 +859,7 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
     .footer {position: relative;}
     .lnk-map {position: relative; bottom: auto; right: auto; padding-bottom: 5px;}
     .right-column-inner {padding-bottom: 0 !important;}
-
+    .map-columns td {display: block; padding-left: 0;}
     
 }
 
