@@ -304,7 +304,7 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
         .menu-left li.active {padding: 0 0 5px; font-family: 'nerisblack';} 
             .menu-left li.active a, .menu-left li.active span {background: #fff; border: 3px solid #00a1df; padding: 9px 0 11px 16px; color: #00a1df;}
 .right-column-inner {float: right; width: 870px; padding-bottom: 190px !important; margin-bottom: -170px;}
-    .crubs {padding: 0px 0 34px; font-size: 14px; color: #888; margin: -4px 0 0; line-height: 24px; position: relative; top: -2px;}
+    .crubs {padding: 0px 0 10px; min-height: 48px; font-size: 14px; color: #888; margin: -4px 0 0; line-height: 24px; position: relative; top: -2px;}
         .crubs a {border-color: #868686;}
         .crubs a:hover {border-color: transparent;}
         .crubs span {padding: 0 5px;}
@@ -520,7 +520,7 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
         .grid-1-2 {height: 340px; width: 270px;}
         .grid-2-2 {height: 340px; width: 570px;}
         .grid-h {margin: 16px 10px 0 16px;}
-            .grid-h a {font: normal 24px/30px 'nerisblack'; color: #000; border-bottom: 3px solid #00a1df;}
+            .grid-h a {font: normal 24px/1.3em 'nerisblack'; color: #000; border-bottom: 3px solid #00a1df;}
             .grid-h a:hover {border-color: transparent;}
         .grid-1-2 .grid-h {margin-top: 13px;}
         .grid-2-2 .grid-h {margin-top: 13px;}
@@ -536,7 +536,7 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
                 .grid-1-1 .grid-date-col * {font: normal 14px/18px 'nerislight';}
                 .grid-1-1 .grid-date-col strong {padding-right: 4px;}
         }
-            .grid-1-2 .grid-h a {font-size: 36px; line-height: 40px;}
+            .grid-1-2 .grid-h a {font-size: 36px; line-height: 1.3em;}
             .grid-date-one .grid-date-col {padding-bottom: 24px;}
             .grid-date-one .grid-date-col span {position: absolute; padding-top: 6px;}
             .grid-1-2 .grid-date-one .grid-date-col span {}
@@ -544,6 +544,7 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
     .grid-2-2 .grid-h a {font-size: 36px; line-height: 42px;}
 .js-menu-tabs .active {display: none;}
     .contact-baner .baner-big-right {margin: 0;}
+    .wr .contact-baner {padding-left: 0; padding-right: 0;}
 
 
 input[type='radio'] {position: absolute; left: -10000px;}
@@ -622,7 +623,7 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
     .grid-column {margin: 0 8px;}
     .grid-box {margin: 0 8px 16px;}
     .grid {margin: 0 -8px;}
-    .grid-1-2 .grid-h a {font-size: 24px; line-height: 40px;}
+    .grid-1-2 .grid-h a {font-size: 24px;}
     .header span {font-size: 25px; line-height: 30px;}
     .header a {float: right; line-height: 30px;}
     .right-column {width: 230px;}
@@ -632,7 +633,7 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
     .slider-h {font-size: 40px; line-height: 60px; max-height: 180px; padding-top: 10px; padding-left: 20px; padding-right: 20px;}
     .sl-img {right: auto; left: 204px;}
     .slider-date {top: 227px; left: 243px;}
-    .slider-h2 {width: 212px; padding: 12px 20px 0 20px;}
+    .slider-h2 {width: 212px; padding: 300px 20px 0 20px; left: 0;}
     .slider-main .slick-arrow {top: 333px}
     .sl-btn {height: 49px; line-height: 49px;}
     .slider-main .slick-next {right: 30px;}
@@ -695,6 +696,7 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
         border-radius: 0;}
+    .slider-h2 {display: none;}
 
 
 }
@@ -826,7 +828,7 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
         -moz-box-sizing: border-box;
         box-sizing: border-box;}
     .grid-1-1, .grid-1-2, .grid-2-2 {overflow: hidden; vertical-align: top;}
-    .grid-h a, .grid-1-2 .grid-h a, .grid-2-2 .grid-h a {font-size: 16px; line-height: 20px;}
+    .grid-h a, .grid-1-2 .grid-h a, .grid-2-2 .grid-h a {font-size: 16px; line-height: 1.3em;}
     .grid-2-2 {width: 100%; padding-right: 20px; margin: 0 0 10px;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
