@@ -591,8 +591,10 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
 
 .header-filter {padding: 0 0 10px; font-weight: bold; color: #00a1df;}
 
-.exhibition-logo {float: left; padding-right: 10px;}
+.exhibition-logo {float: left; margin-right: 10px; border: 1px solid #dadada; max-width: 50px; max-height: 50px;}
     .exhibition-logo img {vertical-align: top; max-width: 50px;}
+.page-txt-logo {float: left; border: 1px solid #dadada; max-width: 98px; max-height: 98px; margin: 6px 20px 10px 0;}
+    .page-txt-logo img {max-width: 100%; max-height: 100%; vertical-align: top;}
 
 @media screen and (max-width: 1200px) {
     .wr {width: auto; padding: 0 20px;}
