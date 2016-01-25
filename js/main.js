@@ -279,7 +279,7 @@ $(document).ready(function(){
 			errorLnk();
 		}
 	});
-	$('.js-valid-phone-home').focusout(function(){
+	$('.active .js-valid-phone-home').focusout(function(){
 		var validText = $(this).val().length;
 		if(validText < 6) {
 			$(this).addClass('error-inp');
@@ -308,8 +308,11 @@ $(document).ready(function(){
 	if($('.js-valid-phone').length) {
 		$('.js-valid-phone').mask("+375 00 000 00 00", {placeholder: "+375 __ ___ __ __"});
 	};
+	if($('.js-phone').length) {
+		$('.js-phone').mask("+375 00 000 00 00", {placeholder: "+375 __ ___ __ __"});
+	};
 	
-	$('.js-valid-phone').focusout(function(){
+	$('.active .js-valid-phone').focusout(function(){
 		var validText = $(this).val().length;
 		if(validText < 17) {
 			$(this).addClass('error-inp');
@@ -320,6 +323,9 @@ $(document).ready(function(){
 	});
 	if($('.js-valid-phone-home').length) {
 		$('.js-valid-phone-home').mask('000000000000');
+	}
+	if($('.js-phone-home').length) {
+		$('.js-phone-home').mask('000000000000');
 	}
 
 
@@ -344,6 +350,21 @@ $(document).ready(function(){
 		return false;
 	});
 
+	$('.form-td-check label').click(function(){
+		console.log('da');
+		if($('#resedent_2').prop("checked")) {
+			$('.form-neresident').hide();
+			$('.form-neresident').removeClass('active');
+			$('.form-resident').show();
+			$('.form-resident').addClass('active');
+		} else {
+			$('.form-resident').hide();
+			$('.form-resident').removeClass('active');
+			$('.form-neresident').show();
+			$('.form-neresident').addClass('active');
+		}
+	});
+
 });
 function errorSearch() {
 	var validError = 0;
@@ -360,7 +381,7 @@ function errorSearch() {
 			$('.form-tr-message span').append(ErrorHead);
 		};
 	});
-	$('.js-valid-phone-home').each(function(){
+	$('.active .js-valid-phone-home').each(function(){
 		var validText = $(this).val().length;
 		if(validText < 6) {
 			validError = ++validError;
@@ -394,7 +415,7 @@ function errorSearch() {
             }
 		}
 	});
-	$('.js-valid-phone').each(function(){
+	$('.active .js-valid-phone').each(function(){
 		var validText = $(this).val().length;
 		if(validText < 17) {
 			validError = ++validError;
@@ -405,6 +426,10 @@ function errorSearch() {
 			$('.form-tr-message span').append(ErrorHead);
 		}
 	});
+
+	
+
+
 	// Якорь
  	$('.form-tr-message a').click(function(){
 	    var anchor = $(this).attr('href');
@@ -435,7 +460,7 @@ function errorLnk() {
 			$('.form-tr-message span').append(ErrorHead);
 		};
 	});
-	$('.js-valid-phone-home').each(function(){
+	$('.active .js-valid-phone-home').each(function(){
 		var validText = $(this).val().length;
 		if(validText < 6) {
 			validError = ++validError;
@@ -465,7 +490,7 @@ function errorLnk() {
             }
 		}
 	});
-	$('.js-valid-phone').each(function(){
+	$('.active .js-valid-phone').each(function(){
 		var validText = $(this).val().length;
 		if(validText < 17) {
 			validError = ++validError;

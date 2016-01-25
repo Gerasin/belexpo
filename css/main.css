@@ -464,6 +464,7 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
                 .form-dop-table table th.last {border-right: 1px solid #cdcdcd;}
                 .table-inp {margin-right: -1px;}
     .form-namber {width: 186px;}
+    .form-neresident {display: none;}
 .filter {margin-left: -44px; padding: 0 0 26px; min-height: 50px; margin-top: -13px;}
     .filter-item {padding: 0 0 0 44px; display: inline-block;}
         .filter-h {float: left; padding: 0 17px 0 0; height: 40px; line-height: 40px;}
