@@ -4,11 +4,11 @@
 
 @font-face {
     font-family: 'nerisblack';
-    src: url('eimantas_pabkonis_-_neris_black-webfont.eot');
-    src: url('eimantas_pabkonis_-_neris_black-webfont.eot?#iefix') format('embedded-opentype'),
-         url('eimantas_pabkonis_-_neris_black-webfont.woff2') format('woff2'),
-         url('eimantas_pabkonis_-_neris_black-webfont.woff') format('woff'),
-         url('eimantas_pabkonis_-_neris_black-webfont.ttf') format('truetype');
+    src: url('neris-black-webfont.eot');
+    src: url('neris-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('neris-black-webfont.woff2') format('woff2'),
+         url('neris-black-webfont.woff') format('woff'),
+         url('neris-black-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
