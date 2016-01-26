@@ -357,9 +357,9 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
         .menu-page li a, .menu-page li span {display: block; min-height: 24px; line-height: 24px; background: #fff7e5; border: 0; padding: 12px 0 14px 19px; position: relative;}
         .menu-page li a:hover {background: #ffcb00;}
     .menu-page li.active {padding: 0 0 5px; font-family: 'nerisblack';} 
-        .menu-page li.active a, .menu-page li.active span {background: #fff; border: 3px solid #ff9900; padding: 9px 0 11px 16px; color: #ff9900;}
+        .menu-page li.active a, .menu-page li.active span {background: #fff; border: 3px solid #ff9900; padding: 9px 0 11px 16px; color: #ff9900; font-size: 19px;}
         .menu-page li.active span:before {position: absolute; content: ' '; top: -3px; bottom: -3px; width: 12px; right: -12px; background: url(../img/menu-act.png) 0 0 no-repeat; background-size: 100% 100%;}
-    .menu-page.menu-left li.active a, .menu-page.menu-left li.active span {border: 3px solid #00a1df; color: #00a1df;}
+    .menu-page.menu-left li.active a, .menu-page.menu-left li.active span {border: 3px solid #00a1df; color: #00a1df; font-size: 19px;}
     .menu-page.menu-left.menu-page-lnk li a {background: #e5f5fc !important;}
     .menu-page.menu-left.menu-page-lnk li a:hover {background: #cde3ec !important;}
     .menu-page.menu-left.menu-page-active li.active span:before {background-size: none; width: 0; height: 0; top: 19px; right: 12px;
