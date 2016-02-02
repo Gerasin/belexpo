@@ -27,7 +27,7 @@ $(document).ready(function(){
 	$('.search-head-open').click(function(){
 		$('.search-head').addClass('active');
 		if($(window).width() > 767) {
-			$('.search-head input').animate({'width' : 226 + 'px'});
+			$('.search-head input').animate({'width' : 190 + 'px'});
 			if($(window).width() < 1000) {
 				$('.menu').hide();
 			};

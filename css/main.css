@@ -118,17 +118,17 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
         .logo a {border: none;}
     .menu {float: left; padding: 46px 0 10px; overflow: hidden;}
         .menu ul {margin: 0 0 0 -38px; padding: 0; position: relative;}
-            .menu ul li {list-style: none; float: left; margin: 0 0 0 38px; position: relative; font-size: 18px; color: #888;}
+            .menu ul li {list-style: none; float: left; margin: 0 0 0 38px; position: relative; font-size: 16px; color: #888;}
                 .menu ul li:before {position: absolute; content: ' '; top: 11px; left: -20px; background: url(../img/marker.png) 0 0 no-repeat; width: 3px; height: 3px;}
                 .menu ul li a {border-bottom: 1px solid #00a1df;}
                 .menu ul li a:hover {border-color: transparent;}
-    .lange {float: right; padding: 46px 0 0 0; width: 63px; font-size: 18px; text-align: right;}
+    .lange {float: right; padding: 46px 0 0 0; width: 54px; font-size: 18px; text-align: right;}
         .lange a {border-bottom: 1px solid #00a1df;}
         .lange a:hover {border-color: transparent;}
         .rus {display: none;}
         .lange.active .eng {display: none;}
         .lange.active .rus {display: inline;}
-    .search-head {float: right; border: 1px solid #dadada; border-color: transparent; height: 48px; position: relative; padding: 0 45px 0 27px; margin: 32px 0 0;
+    .search-head {float: right; border: 1px solid #dadada; border-color: transparent; height: 48px; position: relative; padding: 0 45px 0 20px; margin: 32px 0 0;
         -webkit-border-radius: 24px;
         -moz-border-radius: 24px;
         border-radius: 24px;}
@@ -304,8 +304,9 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
             .menu-left li a:hover {background: #cde3ec;}
         .menu-left li.active {padding: 0 0 5px; font-family: 'nerisblack';} 
             .menu-left li.active a, .menu-left li.active span {background: #fff; border: 3px solid #00a1df; padding: 9px 0 11px 16px; color: #00a1df;}
+    .link-close {margin: -5px 0 20px;}
 .right-column-inner {float: right; width: 870px; padding-bottom: 190px !important; margin-bottom: -170px;}
-    .crubs {padding: 0px 0 10px; min-height: 48px; font-size: 14px; color: #888; margin: -4px 0 0; line-height: 24px; position: relative; top: -2px;}
+    .crubs {padding: 0px 0 10px; min-height: 48px; font-size: 14px; color: #888; margin: -5px 0 0; line-height: 24px; position: relative; top: -2px;}
         .crubs a {border-color: #868686;}
         .crubs a:hover {border-color: transparent;}
         .crubs span {padding: 0 5px;}
@@ -387,6 +388,7 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
             .share-soc ul li {list-style: none; float: left; display: block; padding: 0 20px 0 0;} 
                 .share-soc ul li a:hover {opacity: 0.8;}
                 .share-soc ul li a:active {opacity: 0.9;}
+
 
 
 
@@ -532,8 +534,8 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
         .grid-date {position: absolute; left: 20px; right: 20px; bottom: 17px; color: #240a2b; font-size: 36px;}
         .grid-date.grid-date-one {bottom: 15px;}
         .grid-1-1 .grid-date {bottom: 7px;}
-            .grid-date-col {float: left; padding-right: 10px; line-height: 20px;}
-                .grid-date-col span {font-size: 18px;}
+            .grid-date-col {float: left; padding-right: 10px; line-height: 20px; max-width: 42px;}
+                .grid-date-col span {font-size: 18px; text-transform: lowercase;}
 
         @media screen and (min-width: 767px) {
             .grid-1-1 .grid-date-col {float: none; display: inline-block; padding: 0; margin: 0 -5px 0 0; font: normal 14px/18px 'nerislight';}
@@ -607,7 +609,7 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
     .menu ul {margin-left: -27px;}
     .menu ul li {margin: 0 0 0 27px; font-size: 15px;}
     .menu ul li:before {left: -17px;}
-    .logo {width: 141px; padding-top: 25px;}
+    .logo {width: 123px; padding-top: 25px;}
     .logo img {width: 100px;}
     .menu {padding-top: 37px;}
     .lange {padding-top: 37px;}
