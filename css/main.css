@@ -536,6 +536,7 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
         .grid-1-1 .grid-date {bottom: 7px;}
             .grid-date-col {float: left; padding-right: 10px; line-height: 20px; max-width: 42px;}
                 .grid-date-col span {font-size: 18px; text-transform: lowercase;}
+            .grid-1-1 .grid-date-col {max-width: 200px;}
 
         @media screen and (min-width: 767px) {
             .grid-1-1 .grid-date-col {float: none; display: inline-block; padding: 0; margin: 0 -5px 0 0; font: normal 14px/18px 'nerislight';}
