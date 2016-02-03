@@ -63,6 +63,15 @@ $(document).ready(function(){
  		$('.slider').slick('unslick');
  	};
 
+ 	$('.slider-text .slick-next').click(function(){
+ 		$('.slider-img .slick-next').click();
+ 	});
+ 	$('.slider-text .slick-prev').click(function(){
+ 		$('.slider-img .slick-prev').click();
+ 	});
+
+
+
  	// Контакты
  	$('.contacts-header').click(function(){
  		$(this).parents('.contacts-item').toggleClass('active');
