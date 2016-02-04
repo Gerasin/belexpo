@@ -46,85 +46,51 @@ $(document).ready(function(){
    		$(this).attr('placeholder',$(this).data('placeholder'));
  	});
 
- 	// Карусель на главной
- 	/*$('.slider-img').slick({
- 		speed: 200,
- 		cssEase: 'ease-out',
 
- 		responsive: [
-		    {
-		      breakpoint: 1200,
-		      settings: {
-		        slidesToShow: 1,
-		        slidesToScroll: 1
-		      }
+	if($(".slider-img").length) {
+		var owl = $(".slider-img");
+	 
+		 owl.owlCarousel({
+		    center: true,
+		    items:1,
+		    loop:true,
+		    responsive:{
+		        600:{
+		            items:1
+		        }
 		    }
-	    ]
- 	});*/
+		});
 
-	/*$(".slider-img").owlCarousel({
-		navigation : true, // Show next and prev buttons
-      	slideSpeed : 300,
-      	paginationSpeed : 400,
-      	singleItem: true
-	});*/
-
-	var owl = $(".slider-img");
- 
-	 owl.owlCarousel({
-	    center: true,
-	    items:1,
-	    loop:true,
-	    responsive:{
-	        600:{
-	            items:1
-	        }
-	    }
-	});
-
- 	/*$('.slider-text').slick({
- 		speed: 1000,
- 		cssEase: 'ease-in-out',
- 		fade: true,
- 		responsive: [
-		    {
-		      breakpoint: 1200,
-		      settings: {
-		        slidesToShow: 1,
-		        slidesToScroll: 1
-		      }
+		var owl_text = $(".slider-text");
+	 
+		 owl_text.owlCarousel({
+		    center: true,
+		    items:1,
+		    loop:true,
+		    animateOut: 'fadeOut',
+		    animateIn: 'flipInX',
+		    responsive:{
+		        600:{
+		            items:1
+		        }
 		    }
-	    ]
- 	});*/
-	var owl_text = $(".slider-text");
- 
-	 owl_text.owlCarousel({
-	    center: true,
-	    items:1,
-	    loop:true,
-	    animateOut: 'fadeOut',
-	    animateIn: 'flipInX',
-	    responsive:{
-	        600:{
-	            items:1
-	        }
-	    }
-	});
+		});
 
- 	if($(window).width() < 767) {
- 		$('.slider').slick('unslick');
- 	};
+	 	if($(window).width() < 767) {
+	 		$('.slider').slick('unslick');
+	 	};
 
- 	$('.sl-next').click(function(){
- 		owl.trigger('next.owl.carousel');
- 		owl_text.trigger('next.owl.carousel');
- 		return false
- 	});
- 	$('.sl-prev').click(function(){
- 		owl.trigger('prev.owl.carousel');
- 		owl_text.trigger('prev.owl.carousel');
- 		return false
- 	});
+	 	$('.sl-prev').click(function(){
+	 		owl.trigger('next.owl.carousel');
+	 		owl_text.trigger('next.owl.carousel');
+	 		return false
+	 	});
+	 	$('.sl-next').click(function(){
+	 		owl.trigger('prev.owl.carousel');
+	 		owl_text.trigger('prev.owl.carousel');
+	 		return false
+	 	});
+	};
 
 
 
