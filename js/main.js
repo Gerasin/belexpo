@@ -47,8 +47,10 @@ $(document).ready(function(){
  	});
 
  	// Карусель на главной
- 	$('.slider').slick({
- 		speed: 800,
+ 	/*$('.slider-img').slick({
+ 		speed: 200,
+ 		cssEase: 'ease-out',
+
  		responsive: [
 		    {
 		      breakpoint: 1200,
@@ -58,16 +60,70 @@ $(document).ready(function(){
 		      }
 		    }
 	    ]
- 	});
+ 	});*/
+
+	/*$(".slider-img").owlCarousel({
+		navigation : true, // Show next and prev buttons
+      	slideSpeed : 300,
+      	paginationSpeed : 400,
+      	singleItem: true
+	});*/
+
+	var owl = $(".slider-img");
+ 
+	 owl.owlCarousel({
+	    center: true,
+	    items:1,
+	    loop:true,
+	    responsive:{
+	        600:{
+	            items:1
+	        }
+	    }
+	});
+
+ 	/*$('.slider-text').slick({
+ 		speed: 1000,
+ 		cssEase: 'ease-in-out',
+ 		fade: true,
+ 		responsive: [
+		    {
+		      breakpoint: 1200,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1
+		      }
+		    }
+	    ]
+ 	});*/
+	var owl_text = $(".slider-text");
+ 
+	 owl_text.owlCarousel({
+	    center: true,
+	    items:1,
+	    loop:true,
+	    animateOut: 'fadeOut',
+	    animateIn: 'flipInX',
+	    responsive:{
+	        600:{
+	            items:1
+	        }
+	    }
+	});
+
  	if($(window).width() < 767) {
  		$('.slider').slick('unslick');
  	};
 
- 	$('.slider-text .slick-next').click(function(){
- 		$('.slider-img .slick-next').click();
+ 	$('.sl-next').click(function(){
+ 		owl.trigger('next.owl.carousel');
+ 		owl_text.trigger('next.owl.carousel');
+ 		return false
  	});
- 	$('.slider-text .slick-prev').click(function(){
- 		$('.slider-img .slick-prev').click();
+ 	$('.sl-prev').click(function(){
+ 		owl.trigger('prev.owl.carousel');
+ 		owl_text.trigger('prev.owl.carousel');
+ 		return false
  	});
 
 
@@ -542,10 +598,13 @@ $(window).load(function(){
 
 
 function textHeight() {
+	var boxH = 215;
+	if($(window).width() < 1200) {
+		boxH = 100;
+	}
 	$('.slider-h').each(function(){
 		var textThis = $(this);
 		var textH = textThis.find('span').height();
-		var boxH = 215;
 		if(textH > boxH) {
 			var textSize = textThis.attr('rel');
 			textSize = --textSize;
@@ -559,7 +618,6 @@ function textHeight() {
 	$('.slider-h').each(function(){
 		var textThis = $(this);
 		var textH = textThis.find('span').height();
-		var boxH = 215;
 		if(textH > boxH) {
 			indexStart = ++indexStart;
 		};
