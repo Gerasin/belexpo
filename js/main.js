@@ -54,6 +54,9 @@ $(document).ready(function(){
 		    center: true,
 		    items:1,
 		    loop:true,
+		    mouseDrag: false,
+		    touchDrag: false,
+		    pullDrag: false,
 		    responsive:{
 		        600:{
 		            items:1
@@ -67,6 +70,9 @@ $(document).ready(function(){
 		    center: true,
 		    items:1,
 		    loop:true,
+		    mouseDrag: false,
+		    touchDrag: false,
+		    pullDrag: false,
 		    animateOut: 'fadeOut',
 		    animateIn: 'flipInX',
 		    responsive:{
