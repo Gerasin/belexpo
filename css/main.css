@@ -162,7 +162,7 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
     .slider-main a {outline: none;}
     .slider-main .slick-list {overflow: inherit;}
     .slider {position: relative; width: 1170px; margin: 0 auto;}
-        .slider-item {float: left; width: 1170px; height: 500px; position: relative; margin: 0;}
+        .slider-item {float: left; width: 1170px; height: 480px; overflow: hidden; position: relative; margin: 0;}
             /*.slider-item:before {position: absolute; top: 0; left: -30px; bottom: 0; width: 200px; background: #fff; content: ' '; z-index: 2;}*/
             .sl-img {position: absolute; top: 0; right: 0; z-index: 1;}
             .slider-h {max-height: 214px; padding: 43px 0 12px; overflow: hidden; font: 60px/1.2em 'nerisblack'; margin: 0 0 32px; position: relative; z-index: 2;}
@@ -308,7 +308,7 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
             .menu-left li.active a, .menu-left li.active span {background: #fff; border: 3px solid #00a1df; padding: 9px 0 11px 16px; color: #00a1df;}
     .link-close {margin: -5px 0 18px; display: block; border: 3px solid #e6e6e6; position: relative; height: 44px; padding: 0 0 0 30px; font-size: 19px; line-height: 40px; color: #000 !important; text-decoration: none;}
         .link-close:before {content: ' '; position: absolute; left: -3px; top: -3px; width: 12px; height: 50px; background: url(../img/link-close.png) 0 0 no-repeat;}
-    .link-close:hover {border: 3px solid #e6e6e6; opacity: 0.8;}
+    .link-close:hover {border: 3px solid #e6e6e6; opacity: 0.8; text-decoration: none;}
 
 .right-column-inner {float: right; width: 870px; padding-bottom: 190px !important; margin-bottom: -170px;}
     .crubs {padding: 0px 0 11px; min-height: 48px; font-size: 14px; color: #888; margin: -5px 0 0; line-height: 24px; position: relative; top: -2px;}
@@ -649,7 +649,7 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
 
 .owl-buttons {margin-top: -30px;}
 .slider-main-wr {width: 1170px; margin: 0 auto; position: relative;}
-.owl-carousel .owl-item img {width: auto;}
+.owl-carousel .owl-item img {width: 100%;}
 
 
 @media screen and (max-width: 1200px) {
