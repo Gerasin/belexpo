@@ -158,7 +158,7 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
 
 
 .slick-slide img {width: 100%;}
-.slider-main {overflow: hidden; margin: 0 0 37px; height: 500px;}
+.slider-main {overflow: hidden; margin: 0 0 37px; height: 480px;}
     .slider-main a {outline: none;}
     .slider-main .slick-list {overflow: inherit;}
     .slider {position: relative; width: 1170px; margin: 0 auto;}
@@ -652,6 +652,13 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
 .owl-carousel .owl-item img {width: 100%;}
 
 
+.slider-stat .slider-h, .slider-stat .slider-h, .slider-stat .slider-h2, .slider-stat .slider-date {opacity: 1;}
+.slider-img-over {overflow: hidden; left: 230px; position: absolute; top: 0; right: 0; z-index: 1;}
+.slider-img-over-in {margin: 0 0 0 -230px;}
+.slider-img-over-in .sl-img {position: relative;}
+.date_one {}
+    .date_one span {left: 0; margin-left: 0; text-align: left;}
+
 @media screen and (max-width: 1200px) {
     .wr {width: auto; padding: 0 20px;}
     .menu ul {margin-left: -27px;}
@@ -731,6 +738,7 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
     .slider-main-wr {width: 1000px;}
     .sl-next, .sl-prev {top: 341px;}
     .slider-img  {height: 438px;}
+    .slider-img-over .sl-img {left: 0; width: 100%;}
 
 
 }
@@ -768,6 +776,8 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
     .slider-item {height: 323px;}
     .slider-line {height: 360px;}
     .slider-main {height: 330px;}
+    .slider-img-over {left: 170px;}
+    .slider-img-over-in {margin-left: -170px;}
 
 }
 
