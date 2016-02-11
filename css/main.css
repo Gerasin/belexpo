@@ -309,6 +309,7 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
     .link-close {margin: -5px 0 18px; display: block; border: 3px solid #e6e6e6; position: relative; height: 44px; padding: 0 0 0 30px; font-size: 19px; line-height: 40px; color: #000 !important; text-decoration: none;}
         .link-close:before {content: ' '; position: absolute; left: -3px; top: -3px; width: 12px; height: 50px; background: url(../img/link-close.png) 0 0 no-repeat;}
     .link-close:hover {border: 3px solid #e6e6e6; opacity: 0.8; text-decoration: none;}
+    .link-close a {border: 0;}
 
 .right-column-inner {float: right; width: 870px; padding-bottom: 190px !important; margin-bottom: -170px;}
     .crubs {padding: 0px 0 11px; min-height: 48px; font-size: 14px; color: #888; margin: -5px 0 0; line-height: 24px; position: relative; top: -2px;}
