@@ -57,6 +57,8 @@ $(document).ready(function(){
 		    mouseDrag: false,
 		    touchDrag: false,
 		    pullDrag: false,
+			animateOut: 'fadeOut',
+			animateIn: 'flipInX',
 		    responsive:{
 		        600:{
 		            items:1

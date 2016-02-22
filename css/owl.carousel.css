@@ -153,7 +153,7 @@
   -o-transition: opacity 400ms ease;
   transition: opacity 400ms ease;
 }
-.owl-carousel .owl-item img {
+.owl-carousel .owl-item.active img {
   transform-style: preserve-3d;
 }
 

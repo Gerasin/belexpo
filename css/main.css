@@ -634,8 +634,41 @@ input[type='radio']:checked + label:before {background-position: 100% 0;}
 .slider-img:after {position: absolute; content: ' '; top: 0; height: 100%; width: 1000px; left: 100%; background: #fff; opacity: 0.7; z-index: 90;}
 
 .sl-img {height: 100%;}
-body .owl-carousel .owl-item img {height: 100%; width: auto;}
-.owl-item.active + .owl-item > .slider-item > img {right: auto; left: 0;}
+body .owl-carousel .owl-item img {height: 100%; width: auto; }
+.owl-item.active + .owl-item > .slider-item > img {right: auto; left: 0;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-name: fadeTime;
+    animation-name: fadeTime;}
+
+@-webkit-keyframes fadeTime {
+  0% {
+    right: 0; left: auto;
+  }
+  39% {
+    right: 0; left: auto;
+    }
+  40% {
+    right: auto; left: 0;
+    }
+  100% {
+    right: auto; left: 0;
+  }
+}
+@keyframes fadeTime {
+  0% {
+    right: 0; left: auto;
+  }
+  39% {
+    right: 0; left: auto;
+    }
+  40% {
+    right: auto; left: 0;
+    }
+  100% {
+    right: auto; left: 0;
+  }
+}
 
 
 
