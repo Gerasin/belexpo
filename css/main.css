@@ -531,7 +531,8 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
                 -o-transition: opacity 0.2s linear;
                 transition: opacity 0.2s linear;}
             .grid-box:hover:before {opacity: 0;}
-            .grid-h {position: relative;}
+            .grid-h {position: relative; }
+                .grid-h a {overflow: hidden; text-overflow: ellipsis; display: inline-block; max-width: 100%;}
             .grid-box div, .grid-box a {z-index: 10;}
         .grid-1-1 {height: 155px; width: 270px;}
         .grid-1-2 {height: 340px; width: 270px;}
