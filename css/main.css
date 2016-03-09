@@ -678,7 +678,7 @@ body .owl-carousel .owl-item img {height: 100%; width: auto; }
 /*.slider-item:before {position: fixed; width: 300px; height: 500px; content: ' '; background: #fff; z-index: 2;}*/
 
 .head-mob .delivery-form {padding-top: 20px; margin-right: -15px;}
-.head-mob .delivery-inp {width: 226px;}
+.head-mob .delivery-inp {width: 210px;}
 
 .date-mob {display: none;}
 .contact-phone-lnk a {border: 0;}
@@ -986,6 +986,9 @@ body .owl-carousel .owl-item img {height: 100%; width: auto; }
     .map-columns ul ul {margin-left: 0;}
     .map-columns ul li {background: url(../img/marker.png) 18px 9px no-repeat;}
     .slider-main {display: none;}
+    h1 {font-size: 22px;}
+    img {max-width: 100%;}
+    .right-column-inner img {height: auto;}
     
 }
 
