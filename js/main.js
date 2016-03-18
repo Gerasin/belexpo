@@ -1,5 +1,23 @@
 $(document).ready(function(){
 
+	// Форма заявки
+	$('.select-check').on( "change", function() {
+  		if($(this).val() == 'other') {
+  			$(this).parents('.form-tr-over').next('.select-radio').fadeIn();
+  		} else {
+  			$(this).parents('.form-tr-over').next('.select-radio').fadeOut();
+  		}
+	});
+
+	$('.form-td-check input').on( "change", function() {
+		if($(this).parents('.form-td-check').find('.other_input').prop("checked")) {
+			$(this).parents('.select-radio').find('.check-radio-inp').show()
+		} else {
+			$(this).parents('.select-radio').find('.check-radio-inp').hide()
+		}
+	});
+
+
 	// Попап
 	var popupOpen;
 	$(".popup_open").click(function(){
@@ -390,7 +408,6 @@ $(document).ready(function(){
 	});
 
 	$('.form-td-check label').click(function(){
-		console.log('da');
 		if($('#resedent_2').prop("checked")) {
 			$('.form-neresident').hide();
 			$('.form-neresident').removeClass('active');

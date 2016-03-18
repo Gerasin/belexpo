@@ -340,6 +340,9 @@ body {font: normal 18px "nerislight"; color: #000; position: relative; min-heigh
     .search-null .search-head.active input {width: 258px;}
 .head-txt {padding: 0 0 60px 63px; font-size: 24px; line-height: 34px; width: 810px;}
     .head-txt p {margin: 0;}
+.head-zayavka {width: auto;}
+    .head-zayavka p {margin: 0 0 10px;}
+        .head-zayavka p strong {font-family: 'nerissemibold'; font-weight: normal;}
 .page-txt {padding: 0 0 32px;}
     .page-txt p {font-size: 18px; line-height: 26px; margin: 0 0 15px;}
     .page-txt img {max-width: 100%;}
@@ -704,6 +707,41 @@ body .owl-carousel .owl-item img {height: 100%; width: auto; }
 .date_one {}
     .date_one span {left: 0; margin-left: 0; text-align: left;}
 
+.zayavka {padding: 0 0 0 63px;}
+.zayavka .form-th {float: none; width: 300px; text-align: left; padding: 0 0 5px; font-size: 18px; font-family: 'nerislight';}
+    .zayavka .form-th .col-orange {position: relative; right: auto;}
+.zayavka .form-td {margin: 0;}
+.zayavka label {font: normal 18px 'nerislight';}
+.zayavka .form-td .inp-st {width: 300px;}
+.zayavka .select-st {width: 300px;}
+.zayavka .custom-select li {white-space: normal;}
+.zayavka .form-tr-btn button {width: 200px;}
+.zayavka--footer {text-align: left;}
+.zayavka--footer .form-tr-btn {float: left; padding-right: 20px;}
+.zayavka--footer .form-tr-message {display: inline-block; text-align: left; padding-top: 8px;}
+.zayavka-work {background: #c6e7f3; display: block; font-size: 24px; padding: 11px 20px 13px 20px; margin: 16px 0 14px -20px;}
+    .zayavka-work span {font-size: 18px;}
+    .zayavka-work strong {font-family: 'nerissemibold'; font-weight: normal;}
+.btn-print {display: block; width: 295px; height: 60px; text-decoration: none; color: #fff; background: #00a1df; text-align: center; padding: 0 0 0 45px; font-size: 24px; line-height: 58px; font-family: 'nerislight'; margin: 0 auto; position: relative;}
+    .btn-print:before {position: absolute; content: ' '; width: 24px; height: 28px; top: 16px; left: 47px; background: url(../img/ico-print.png) 0 0 no-repeat;}
+.btn-print:hover {background: #00adf0;} 
+.btn-print:active {background: #0091c9;}
+.zayavka_mail {padding: 10px 0 3px; overflow: hidden;}
+    .zayavka_mail--txt {float: left; width: 273px; padding: 0 0 0 15px; font-family: 'nerislight'; font-size: 18px; height: 38px; border: 1px solid #dadada; background: #fff; margin: 0 10px 0 0;}
+    .zayavka_mail--btn {float: left; outline: none; cursor: pointer; font-size: 0; display: block; border: 0; width: 40px; height: 40px; background: url(../img/mail--btn.png) 0 0 no-repeat;}
+    .zayavka_mail--btn:hover {opacity: 0.8;}
+    .zayavka_mail--btn:active {opacity: 0.9;}
+.zayavka .form-tr-message {display: none;}
+.select-radio {display: none; padding-bottom: 20px !important; position: relative; z-index: 20;}
+.select-radio .form-td-check {padding-bottom: 10px;}
+.select-radio .check-radio-inp {display: none;}
+.custom-select.done select {left: -9999px; position: relative;}
+.form-tr-over {overflow: inherit !important;}
+.form-tr-over .custom-select.active {position: relative; z-index: 21}
+.select-bottom .select-list {top: auto !important; bottom: 40px !important;}
+
+
+
 @media screen and (max-width: 1200px) {
     .wr {width: auto; padding: 0 20px;}
     .menu ul {margin-left: -27px;}
@@ -989,7 +1027,16 @@ body .owl-carousel .owl-item img {height: 100%; width: auto; }
     h1 {font-size: 22px;}
     img {max-width: 100%;}
     .right-column-inner img {height: auto;}
-    
+    .head-zayavka {height: auto;}
+    .zayavka-work {margin-left: -10px;}
+    .zayavka_mail--txt {width: 225px;}
+    .btn-print {width: auto;}
+    .btn-print:before {left: 25px;}
+    .zayavka {padding-left: 0;}
+    .zayavka .form-td .inp-st, .zayavka .select-st {width: 100%;}
+    .zayavka--footer .form-tr-message {display: block;}
+    .zayavka--footer .form-tr-btn {float: none;}
+    .zayavka--footer {padding-bottom: 0;}
 }
 
 @media screen and (max-width: 600px) {
