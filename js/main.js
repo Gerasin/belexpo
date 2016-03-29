@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	$('.footer-padding').css({'height' : $('.footer').height() + 100});
+
 	// Форма заявки
 	$('.select-check').on( "change", function() {
   		if($(this).val() == 'other') {
@@ -425,7 +427,7 @@ $(document).ready(function(){
 function errorSearch() {
 	var validError = 0;
 	$('.form-tr-message span').text('');
-	$('.js-valid').each(function(){
+	$('.js-valid:visible').each(function(){
 		var validText = $(this).val().length;
 		if(validText < 2) {
 			validError = ++validError;
@@ -506,7 +508,7 @@ function errorSearch() {
 function errorLnk() {
 	var validError = 0;
 	$('.form-tr-message span').text('');
-	$('.js-valid').each(function(){
+	$('.js-valid:visible').each(function(){
 		var validText = $(this).val().length;
 		if(validText < 2) {
 			validError = ++validError;
