@@ -365,10 +365,10 @@ $(document).ready(function(){
 	});
 
 	if($('.js-valid-phone').length) {
-		$('.js-valid-phone').mask("+375 00 000 00 00", {placeholder: "+375 __ ___ __ __"});
+		$('.js-valid-phone').mask("+000 (00) 000 00 00", {placeholder: "+___ __ ___ __ __"});
 	};
 	if($('.js-phone').length) {
-		$('.js-phone').mask("+375 00 000 00 00", {placeholder: "+375 __ ___ __ __"});
+		$('.js-phone').mask("+000 (00) 000 00 00", {placeholder: "+___ __ ___ __ __"});
 	};
 	
 	$('.active .js-valid-phone').focusout(function(){
