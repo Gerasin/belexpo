@@ -23,6 +23,7 @@
         <script src="source/jquery.fancybox.pack.js"></script>
         <script src="js/jquery.selectik.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
         <script src="js/main.js"></script>
     </head>
     <body>
@@ -81,46 +82,68 @@
                     </div>
                 </div>
                 <div class="head-cont">
-                    <div class="head-h1">Сводная</div>
+                    <div class="head-h1">Электронные обращения граждан</div>
+                    <div class="head-txt head-zayavka head_obrashenie">
+                       <p>Электронные обращения юридических лиц и индивидуальных предпринимателей направляются на адрес электронной почты <a href="mailto:office@belexpo.by">office@belexpo.by</a> либо посредством ниже приведенной электронной формы.</p>
+                        <p>В соответствии с законодательством Республики Беларусь все поля являются обязательными для ввода.</p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="wr">
-            <div class="left-column-inner">
-                <ul class="menu-page menu-left menu-page-active">
-                    <li class="active"><span>О компании</span></li>
-                </ul>
-                <ul class="menu-page menu-left menu-page-lnk">
-                    <li><a href="">Другой раздел</a></li>
-                    <li><a href="">Другой раздел</a></li>
-                    <li><a href="">Другой раздел</a></li>
-                    <li><a href="">Другой раздел</a></li>
-                </ul>
-                <div class="baner baner-bor-blue"><a href=""><img src="img/baner_1.png" alt=""></a></div>
-                <div class="baner baner-bor-green"><a href=""><img src="img/baner_2.png" alt=""></a></div>
-                <div class="baner baner-bor-blue"><a href=""><img src="img/baner_3.png" alt=""></a></div>
+            <div class="crubs">
+                <a href="">Главная</a> <span>&#62;</span> 
+                <a href="">Выставки</a> <span>&#62;</span> 
+                <a href="">Предстоящие на 2015</a> <span>&#62;</span> Охота и рыбаловство. Осень 2015
             </div>
-            <div class="right-column-inner">
-                <div class="crubs">
-                    <a href="">Главная</a> <span>&#62;</span> 
-                    <a href="">Выставки</a> <span>&#62;</span> 
-                    <a href="">Предстоящие на 2015</a> <span>&#62;</span> Охота и рыбаловство. Осень 2015
-                </div>
-                <div class="page-txt">
-                    <p><a href="index.html">index</a></p>
-                    <p><a href="404.html">404</a></p>
-                    <p><a href="contacts.html">contacts</a></p>
-                    <p><a href="news.html">news</a></p>
-                    <p><a href="search_null.html">search_null</a></p>
-                    <p><a href="text.html">text</a></p>
-                    <p><a href="Vistavka_Page.html">Vistavka_Page</a></p>
-                    <p><a href="Vistavka_Photo.html">Vistavka_Photo</a></p>
-                    <p><a href="Vistavka_Zayavka.html">Vistavka_Zayavka</a></p>
-                    <p><a href="Vistavki.html">Vistavki</a></p>
-                    <p><a href="Obrashenie_grazhdan.html">Obrashenie_grazhdan</a></p>
-                    <p><a href="Obrashenie_urlic.html">Obrashenie_urlic</a></p>
-                </div>
-                <div class="baner-big baner-bor-yellow"><a href=""><img src="img/baner_4.png" alt=""></a></div>
+            <div class="zayavka">
+                <form action="">
+                    <div class="form-tab">
+                        <div class="form-tab-cont active obrashenie_form">
+                            <div id="company_name" class="form-tr">
+                                <div class="form-th">ФИО, либо инициалы гражданина<span class="col-orange">*</span></div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st js-valid">
+                                </div>
+                            </div>
+                            <div id="Legal_address" class="form-tr">
+                                <div class="form-th">Адрес электронной почты<span class="col-orange">*</span></div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st js-valid">
+                                </div>
+                            </div>
+                            <div id="Legal_address" class="form-tr">
+                                <div class="form-th">Почтовый адрес<br> (адрес места жительства и/или работы (учебы)<span class="col-orange">*</span></div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st js-valid">
+                                </div>
+                            </div>
+                            <div id="Legal_address" class="form-tr">
+                                <div class="form-th">Почтовый индекс<span class="col-orange">*</span></div>
+                                <div class="form-td">
+                                    <input type="text" class="inp-st js-valid">
+                                </div>
+                            </div>
+                            <div id="Legal_address" class="form-tr">
+                                <div class="form-th">Текст обращения</div>
+                                <div class="form-td">
+                                    <textarea name="" id="" cols="30" rows="10" class="textar-st"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="down_file">
+                                <a href="" class="file_open">Прикрепить файл</a> (объем одного файла не более 5МБ):
+                                <div class="file_format">PDF, DOCX, DOC, RTF, TXT, ODT, ZIP, RAR, PNG,TIFF, JPEG, JPG</div>
+                                <input type="file" class="file_input">
+                            </div>
+                            
+                            <div class="form-tr-footer zayavka--footer">
+                                <div class="form-tr-btn active"><button>Отправить</button></div>
+                                <div class="form-tr-message">Вы не указали <span></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -135,6 +158,7 @@
                         <li><a href="">Организация выставок</a></li>
                         <li><a href="">Выставочные площади</a></li>
                         <li><a href="">Выставочное оборудование</a></li>
+                        <li><a href="">Строительство стендов</a></li>
                         <li><a href="">Строительство стендов</a></li>
                         <li><a href="">Реклама</a></li>
                     </ul>

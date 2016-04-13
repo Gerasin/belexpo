@@ -1,5 +1,19 @@
 $(document).ready(function(){
 
+	/*---------------------------
+		NEW JS
+	----------------------------*/
+
+	$('.file_open').on( "click", function() {
+		$(this).parent().find('.file_input').click();
+		return false;
+	});
+
+
+	/*---------------------------
+		END NEW JS
+	----------------------------*/
+
 	$('.footer-padding').css({'height' : $('.footer').height() + 100});
 
 	// Форма заявки
