@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+	if($(window).width() < 980) {
+		$('.button_fix--ico').click(function(){
+			if($(this).hasClass('hover')) {
+
+			} else {
+				$('.button_fix--ico').removeClass('hover');
+				$(this).addClass('hover');
+				return false;
+			}
+		})
+	};
+
 	/*---------------------------
 		NEW JS
 	----------------------------*/
@@ -634,6 +646,15 @@ function textHeight() {
 	};
 
 };
+
+
+$('body').bind( "touchend", function(e){
+	var container = $(".button_fix--ico"); 
+  		if (!container.is(e.target) && container.has(e.target).length === 0){
+      	$('.button_fix--ico').removeClass('hover');
+  	};
+}); 
+
 
 
 // Попап
