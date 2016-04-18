@@ -742,7 +742,7 @@ object {max-width: 100%;}
      .zayavka_mail--btn {float: left; outline: none; cursor: pointer; font-size: 0; display: block; border: 0; width: 40px; height: 40px; background: url(../img/mail--btn.png) 0 0 no-repeat;}
      .zayavka_mail--btn:hover {opacity: 0.8;}
      .zayavka_mail--btn:active {opacity: 0.9;}
- .zayavka .form-tr-message {display: none;}
+ .zayavka .form-tr-message {display: none; margin-left: 230px;}
  .select-radio {display: none; padding-bottom: 20px !important; position: relative; z-index: 20;}
  .select-radio .form-td-check {padding-bottom: 10px;}
  .select-radio .check-radio-inp {display: none;}
@@ -751,7 +751,7 @@ object {max-width: 100%;}
  .form-tr-over .custom-select.active {position: relative; z-index: 21}
  .select-bottom .select-list {top: auto !important; bottom: 40px !important;}
 .button_fix {position: fixed; top: 100px; right: 30px; z-index: 50; text-align: right;}
-     .button_fix--ico {display: inline-block; min-width: 60px; height: 60px; background: #00a1df; margin: 0 0 20px; vertical-align: top; font-size: 0;
+     .button_fix--ico {display: inline-block; min-width: 60px; height: 60px; background: #00a1df; margin: 0 0 20px; vertical-align: top; font-size: 0; overflow: hidden;
          -webkit-border-radius: 30px;
          -moz-border-radius: 30px;
          border-radius: 30px;
